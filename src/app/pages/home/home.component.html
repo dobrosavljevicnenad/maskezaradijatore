@@ -1,49 +1,413 @@
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-content">
-      <p class="eyebrow">Dekorativna rešenja za enterijer</p>
-      <h1>{{ title }}</h1>
-      <p class="subtitle">
-        {{ subtitle }}
+<main class="!bg-[#f5f6f7] !text-gray-900 !overflow-hidden" role="main">
+
+  <!-- HERO -->
+  <section class="!relative !min-h-[92vh] !flex !items-center !justify-center !overflow-hidden">
+    <div class="!absolute !inset-0">
+      <img
+        src="assets/maska-za-radijator.png"
+        alt="Maska za radijator od plastificiranog lima"
+        class="!w-full !h-full !object-cover
+               !scale-[1.02]
+               !object-[center_center]
+               sm:!scale-[1.06]
+               lg:!scale-[1]"
+      />
+      <div class="!absolute !inset-0 !bg-[linear-gradient(180deg,rgba(15,23,42,0.42)_0%,rgba(15,23,42,0.56)_35%,rgba(15,23,42,0.74)_100%)]"></div>
+      <div class="!absolute !inset-0 !bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.10),transparent_40%)]"></div>
+    </div>
+
+    <div class="!relative !z-10 !max-w-6xl !mx-auto !px-6 sm:!px-10 !py-16 sm:!py-20 !text-center">
+      <p class="!inline-flex !items-center !gap-2 !text-sm !font-medium !text-white/90 !bg-white/10 !backdrop-blur-md !border !border-white/20 !rounded-full !px-4 !py-2 !mb-6 !shadow-sm">
+        Dekorativne i zaštitne maske za radijatore po meri
       </p>
 
-      <div class="actions">
-        <a href="javascript:void(0)" class="btn btn-primary">Pogledaj modele</a>
-        <a href="javascript:void(0)" class="btn btn-secondary">Zatraži ponudu</a>
+      <h1 class="!text-4xl sm:!text-5xl lg:!text-7xl !font-black !tracking-[-0.04em] !leading-[0.95] !text-white !max-w-5xl !mx-auto">
+        Maske za radijatore koje
+        <span class="!block !text-white/80">ulepšavaju prostor</span>
+        i donose uredniji izgled
+      </h1>
+
+      <p class="!mt-6 !text-lg sm:!text-xl !text-white/85 !leading-relaxed !max-w-3xl !mx-auto">
+        Moderne <strong>maske za radijatore</strong> od plastificiranog lima.
+        Spoj estetike i funkcionalnosti za dom, stan, kancelariju i svaki savremeni enterijer.
+      </p>
+
+      <div class="!mt-8 !flex !flex-wrap !justify-center !gap-3">
+        <span class="!bg-white/12 !backdrop-blur-md !border !border-white/15 !rounded-full !px-4 !py-2.5 !text-sm !text-white">
+          Moderna izrada
+        </span>
+        <span class="!bg-white/12 !backdrop-blur-md !border !border-white/15 !rounded-full !px-4 !py-2.5 !text-sm !text-white">
+          Plastificirani lim
+        </span>
+        <span class="!bg-white/12 !backdrop-blur-md !border !border-white/15 !rounded-full !px-4 !py-2.5 !text-sm !text-white">
+          Izrada po meri
+        </span>
+      </div>
+
+      <div class="!mt-10 !flex !flex-col sm:!flex-row !gap-4 !justify-center">
+        <a
+          href="#proizvod"
+          class="!inline-flex !justify-center !items-center !bg-white !text-gray-950 !font-bold !py-4 !px-8 !rounded-full !shadow-[0_20px_60px_rgba(255,255,255,0.18)] hover:!scale-[1.02] !transition-all !duration-300"
+        >
+          Pogledaj model
+        </a>
+
+        <a
+          [href]="phoneHref"
+          class="!inline-flex !justify-center !items-center !bg-transparent !text-white !font-bold !py-4 !px-8 !rounded-full !border !border-white/30 !backdrop-blur-md hover:!bg-white/10 !transition-all !duration-300"
+        >
+          Pozovi odmah: {{ phoneDisplay }}
+        </a>
       </div>
     </div>
 
-    <div class="hero-card">
-      <div class="mock-image">
-        <img
-          src="assets/maska-za-radijator.png"
-          alt="Maska za radijator"
-          style="width: 100%; max-width: 500px; border-radius: 16px;"
-        />
+    <div class="!absolute !bottom-0 !left-0 !right-0 !h-24 !bg-gradient-to-t !from-[#f5f6f7] !to-transparent"></div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="!max-w-7xl !mx-auto !px-6 sm:!px-10 !-mt-6 !relative !z-20">
+    <div class="!grid sm:!grid-cols-3 !gap-4">
+      <div class="!rounded-[1.75rem] !bg-white !border !border-gray-200 !shadow-sm !p-6 !text-center">
+        <p class="!text-xs !uppercase !tracking-[0.18em] !text-gray-500 !mb-2">Izrada</p>
+        <p class="!text-lg !font-bold !text-gray-950">Po meri</p>
+      </div>
+      <div class="!rounded-[1.75rem] !bg-white !border !border-gray-200 !shadow-sm !p-6 !text-center">
+        <p class="!text-xs !uppercase !tracking-[0.18em] !text-gray-500 !mb-2">Materijal</p>
+        <p class="!text-lg !font-bold !text-gray-950">Plastificirani lim</p>
+      </div>
+      <div class="!rounded-[1.75rem] !bg-white !border !border-gray-200 !shadow-sm !p-6 !text-center">
+        <p class="!text-xs !uppercase !tracking-[0.18em] !text-gray-500 !mb-2">Kontakt</p>
+        <p class="!text-lg !font-bold !text-gray-950">{{ phoneDisplay }}</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="features">
-  <div class="container">
-    <h2>Zašto baš naše maske?</h2>
-
-    <div class="grid">
-      <article class="feature-card">
-        <h3>Moderan dizajn</h3>
-        <p>Jednostavne i elegantne forme koje se uklapaju u svaki prostor.</p>
-      </article>
-
-      <article class="feature-card">
-        <h3>Izrada po meri</h3>
-        <p>Pravimo maske prema dimenzijama vašeg radijatora i prostora.</p>
-      </article>
-
-      <article class="feature-card">
-        <h3>Kvalitetna obrada</h3>
-        <p>Stabilna konstrukcija i pažljivo obrađeni detalji.</p>
-      </article>
+  <!-- PROIZVOD -->
+  <section
+    id="proizvod"
+    class="!max-w-7xl !mx-auto !px-6 sm:!px-10 !pt-16 !pb-12 !scroll-mt-24"
+    aria-labelledby="proizvod-title"
+  >
+    <div class="!text-center !max-w-3xl !mx-auto !mb-10">
+      <p class="!text-sm !font-semibold !uppercase !tracking-[0.22em] !text-gray-500 !mb-3">
+        Izdvojeni model
+      </p>
+      <h2
+        id="proizvod-title"
+        class="!text-3xl sm:!text-4xl lg:!text-5xl !font-black !tracking-[-0.03em] !text-gray-950"
+      >
+        Maska za radijator
+      </h2>
+      <!-- <p class="!mt-4 !text-lg !text-gray-700 !leading-relaxed">
+        Za početak prikazujemo jedan model, a kasnije lako dodajemo više proizvoda, galeriju i posebne stranice.
+      </p> -->
     </div>
-  </div>
-</section>
+
+    <div class="!flex !justify-center">
+      <div
+        class="group !bg-white !rounded-2xl !shadow-sm lg:!shadow-md
+               hover:lg:!shadow-xl hover:lg:!-translate-y-1
+               !transition-all !duration-300
+               !w-full !max-w-sm"
+        itemscope
+        itemtype="https://schema.org/Product"
+      >
+        <!-- Slika -->
+        <a
+          routerLink="/"
+          class="!block !overflow-hidden !relative !rounded-t-2xl"
+        >
+          <img
+            [src]="product.slika[0].url"
+            alt="Dekorativna maska za radijator od plastificiranog lima"
+            class="!w-full !h-64 !object-cover !transition-transform !duration-300 group-hover:!scale-105"
+            itemprop="image"
+          />
+
+          <div class="!absolute !top-3 !left-3 !flex !flex-col !gap-2">
+            <span
+              *ngIf="product.novo"
+              class="!bg-green-500 !text-white !text-[10px] sm:!text-xs !font-bold !px-3 !py-1 !rounded-full !shadow"
+            >
+              NOVO
+            </span>
+          </div>
+        </a>
+
+        <!-- Informacije -->
+        <div class="!p-4 sm:!p-5 !space-y-3">
+          <h3
+            class="!text-base sm:!text-lg lg:!text-xl
+                   !font-semibold !text-gray-800
+                   !font-serif !italic !line-clamp-1"
+            itemprop="name"
+          >
+            {{ product.naziv }}
+          </h3>
+
+          <p
+            class="!text-gray-500 !text-sm lg:!text-[15px]
+                   !italic !line-clamp-2"
+            itemprop="description"
+          >
+            {{ product.opis }}
+          </p>
+
+          <div
+            class="!flex !items-center !justify-between !gap-4 !mt-4"
+            itemprop="offers"
+            itemscope
+            itemtype="https://schema.org/Offer"
+          >
+            <div>
+              <p class="!text-lg sm:!text-xl !font-semibold !text-gray-700">
+                {{ priceFormatted }} RSD
+              </p>
+
+              <meta itemprop="price" [content]="product.cena.toString()" />
+              <meta itemprop="priceCurrency" content="RSD" />
+              <link itemprop="availability" href="https://schema.org/InStock" />
+
+              <div
+                itemprop="shippingDetails"
+                itemscope
+                itemtype="https://schema.org/OfferShippingDetails"
+              >
+                <meta itemprop="shippingDestination" content="RS" />
+              </div>
+
+              <div
+                itemprop="hasMerchantReturnPolicy"
+                itemscope
+                itemtype="https://schema.org/MerchantReturnPolicy"
+              >
+                <meta itemprop="returnPolicyCategory" content="https://schema.org/MerchantReturnFiniteReturnWindow" />
+                <meta itemprop="merchantReturnDays" content="7" />
+                <meta itemprop="returnMethod" content="https://schema.org/ReturnByMail" />
+                <meta itemprop="returnFees" content="https://schema.org/FreeReturn" />
+                <meta itemprop="applicableCountry" content="RS" />
+              </div>
+            </div>
+
+            <a
+              [href]="phoneHref"
+              class="!text-gray-400 hover:lg:!text-blue-500 !transition-colors !duration-200"
+              aria-label="Pozovi za porudžbinu"
+            >
+              <mat-icon>call</mat-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENA + BENEFITI -->
+  <section class="!max-w-7xl !mx-auto !px-6 sm:!px-10 !py-8">
+    <div class="!grid lg:!grid-cols-2 !gap-8">
+      <div class="!rounded-[2rem] !bg-[#111827] !text-white !p-8 sm:!p-10 !shadow-[0_25px_70px_rgba(17,24,39,0.22)]">
+        <p class="!text-sm !uppercase !tracking-[0.20em] !text-gray-400 !mb-3">
+          Cena i izrada
+        </p>
+        <h2 class="!text-3xl sm:!text-4xl !font-black !tracking-[-0.03em] !mb-5">
+          Maska za radijator cena
+        </h2>
+        <p class="!text-gray-200 !leading-relaxed !text-lg !mb-4">
+          Ovaj model maske za radijator trenutno je prikazan sa cenom od
+          <strong class="!text-white">{{ priceFormatted }} RSD</strong>.
+          Kasnije možeš lako dodati više modela, dimenzija i posebne cene.
+        </p>
+        <p class="!text-gray-300 !leading-relaxed !mb-6">
+          Konačna cena može zavisiti od dimenzija, šare, boje i same izrade po meri.
+        </p>
+        <a
+          [href]="phoneHref"
+          class="!inline-flex !items-center !bg-white !text-gray-950 !font-bold !py-3.5 !px-6 !rounded-full hover:!bg-gray-100 !transition"
+        >
+          Pozovi za ponudu
+        </a>
+      </div>
+
+      <div class="!rounded-[2rem] !bg-white !border !border-gray-200 !shadow-sm !p-8 sm:!p-10">
+        <p class="!text-sm !uppercase !tracking-[0.20em] !text-gray-500 !mb-3">
+          Prednosti
+        </p>
+        <h2 class="!text-3xl sm:!text-4xl !font-black !tracking-[-0.03em] !text-gray-950 !mb-8">
+          Zašto maske za radijatore?
+        </h2>
+
+        <div class="!grid sm:!grid-cols-2 !gap-4">
+          <div class="!rounded-3xl !bg-[#f8f9fa] !p-5 !border !border-gray-100">
+            <p class="!font-semibold !text-gray-950 !mb-2">Uredniji izgled prostora</p>
+            <p class="!text-sm !text-gray-700 !leading-relaxed">
+              Radijator dobija elegantniji i moderniji izgled.
+            </p>
+          </div>
+
+          <div class="!rounded-3xl !bg-[#f8f9fa] !p-5 !border !border-gray-100">
+            <p class="!font-semibold !text-gray-950 !mb-2">Dekorativna zaštita</p>
+            <p class="!text-sm !text-gray-700 !leading-relaxed">
+              Maskira radijator i doprinosi lepšem enterijeru.
+            </p>
+          </div>
+
+          <div class="!rounded-3xl !bg-[#f8f9fa] !p-5 !border !border-gray-100">
+            <p class="!font-semibold !text-gray-950 !mb-2">Izrada po meri</p>
+            <p class="!text-sm !text-gray-700 !leading-relaxed">
+              Moguće prilagođavanje dimenzija i izgleda vašem prostoru.
+            </p>
+          </div>
+
+          <div class="!rounded-3xl !bg-[#f8f9fa] !p-5 !border !border-gray-100">
+            <p class="!font-semibold !text-gray-950 !mb-2">Kvalitetan materijal</p>
+            <p class="!text-sm !text-gray-700 !leading-relaxed">
+              Plastificirani lim i moderna izrada za dugotrajan rezultat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION -->
+  <section class="!max-w-7xl !mx-auto !px-6 sm:!px-10 !py-14">
+    <div class="!rounded-[2rem] !overflow-hidden !bg-white !border !border-gray-200 !shadow-sm">
+      <div class="!grid lg:!grid-cols-2 !items-stretch">
+        <figure class="!min-h-[360px] sm:!min-h-[460px]">
+          <img
+            src="assets/maska-za-radijator.png"
+            alt="Dekorativna maska za radijator"
+            class="!w-full !h-full !object-cover"
+            loading="lazy"
+          />
+          <figcaption class="!sr-only">
+            Moderna dekorativna maska za radijator od plastificiranog lima.
+          </figcaption>
+        </figure>
+
+        <div class="!p-8 sm:!p-10 lg:!p-12 !flex !flex-col !justify-center">
+          <p class="!text-sm !uppercase !tracking-[0.20em] !text-gray-500 !mb-3">
+            Istaknuti model
+          </p>
+
+          <h2 class="!text-3xl sm:!text-4xl lg:!text-5xl !font-black !tracking-[-0.03em] !text-gray-950 !mb-5">
+            Dekorativna maska za radijator
+          </h2>
+
+          <p class="!text-gray-700 !text-lg !leading-relaxed !mb-4">
+            Ovaj model spaja moderan izgled i praktičnost. Ako želiš da prostor izgleda urednije,
+            <strong>maska za radijator</strong> je lepo i funkcionalno rešenje.
+          </p>
+
+          <p class="!text-gray-700 !text-lg !leading-relaxed !mb-4">
+            Pogodna je za dnevne sobe, spavaće sobe, kancelarije i sve enterijere u kojima želiš
+            da radijator izgleda diskretnije i estetski lepše.
+          </p>
+
+          <p class="!text-gray-700 !text-lg !leading-relaxed !mb-7">
+            Kasnije ovde možeš dodati više šara, boja, dimenzija i posebne stranice za svaki model.
+          </p>
+
+          <div class="!flex !flex-col sm:!flex-row !gap-4">
+            <a
+              href="#proizvod"
+              class="!inline-flex !items-center !justify-center !bg-gray-950 !text-white !font-bold !py-3.5 !px-6 !rounded-full hover:!bg-black !transition"
+            >
+              Pogledaj model
+            </a>
+
+            <a
+              [href]="phoneHref"
+              class="!inline-flex !items-center !justify-center !bg-gray-100 !text-gray-900 !font-bold !py-3.5 !px-6 !rounded-full hover:!bg-gray-200 !transition"
+            >
+              Pozovi za ponudu
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="!max-w-5xl !mx-auto !px-6 sm:!px-10 !py-16" aria-labelledby="faq-title">
+    <div class="!text-center !mb-10">
+      <p class="!text-sm !uppercase !tracking-[0.20em] !text-gray-500 !mb-3">FAQ</p>
+      <h2 id="faq-title" class="!text-3xl sm:!text-4xl lg:!text-5xl !font-black !tracking-[-0.03em] !text-gray-950">
+        Česta pitanja
+      </h2>
+    </div>
+
+    <div class="!space-y-4">
+      <div class="!bg-white !border !border-gray-200 !rounded-[1.75rem] !p-6 sm:!p-7 !shadow-sm">
+        <h3 class="!text-xl !font-semibold !text-gray-950 !mb-2">
+          Da li izrađujete maske za radijatore po meri?
+        </h3>
+        <p class="!text-gray-700 !leading-relaxed">
+          Da. Dimenzije, izgled i završna obrada mogu se prilagoditi prostoru i vašim željama.
+        </p>
+      </div>
+
+      <div class="!bg-white !border !border-gray-200 !rounded-[1.75rem] !p-6 sm:!p-7 !shadow-sm">
+        <h3 class="!text-xl !font-semibold !text-gray-950 !mb-2">
+          Od kog materijala su izrađene?
+        </h3>
+        <p class="!text-gray-700 !leading-relaxed">
+          Za izradu se koristi kvalitetan plastificirani lim, koji daje moderan i uredan izgled.
+        </p>
+      </div>
+
+      <div class="!bg-white !border !border-gray-200 !rounded-[1.75rem] !p-6 sm:!p-7 !shadow-sm">
+        <h3 class="!text-xl !font-semibold !text-gray-950 !mb-2">
+          Kako mogu da dobijem ponudu?
+        </h3>
+        <p class="!text-gray-700 !leading-relaxed">
+          Najlakše je da pošaljete dimenzije ili da pozovete direktno, pa se dogovorite oko modela i cene.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="!max-w-7xl !mx-auto !px-6 sm:!px-10 !pb-16">
+    <div class="!relative !overflow-hidden !rounded-[2rem] !bg-white !border !border-gray-200 !shadow-sm">
+      <div class="!absolute !inset-0 !bg-[radial-gradient(circle_at_top,rgba(229,231,235,0.85),rgba(255,255,255,0.92),rgba(255,255,255,1))]"></div>
+
+      <div class="!relative !p-8 sm:!p-10 lg:!p-14 !text-center">
+        <p class="!text-sm !uppercase !tracking-[0.20em] !text-gray-500 !mb-3">Kontakt</p>
+        <h2 class="!text-3xl sm:!text-4xl lg:!text-5xl !font-black !tracking-[-0.03em] !text-gray-950 !mb-4">
+          Potrebna vam je maska za radijator?
+        </h2>
+        <p class="!text-lg !text-gray-700 !max-w-3xl !mx-auto !mb-8 !leading-relaxed">
+          Pošaljite nam dimenzije ili nas pozovite i dobićete preporuku i ponudu.
+        </p>
+
+        <div class="!flex !flex-col sm:!flex-row !gap-4 !justify-center">
+          <a
+            [href]="phoneHref"
+            class="!inline-flex !justify-center !items-center !bg-gray-950 !text-white !font-bold !py-4 !px-8 !rounded-full hover:!bg-black !transition"
+          >
+            Pozovi odmah
+          </a>
+
+          <a
+            [href]="phoneHref"
+            class="!inline-flex !justify-center !items-center !bg-gray-100 !text-gray-900 !font-bold !py-4 !px-8 !rounded-full hover:!bg-gray-200 !transition"
+          >
+            Pošalji upit
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating call -->
+  <a
+    [href]="phoneHref"
+    aria-label="Pozovite nas"
+    class="!fixed !bottom-6 !right-6 !z-50 !flex !items-center !gap-3 !bg-gray-950 !text-white !px-5 !py-3.5 !rounded-full !shadow-[0_20px_50px_rgba(0,0,0,0.28)] !transition-all !duration-300 hover:!bg-black hover:!-translate-y-1"
+  >
+    <mat-icon class="!text-white">call</mat-icon>
+    <span class="!hidden sm:!inline !font-semibold !tracking-wide">{{ phoneDisplay }}</span>
+  </a>
+
+</main>
