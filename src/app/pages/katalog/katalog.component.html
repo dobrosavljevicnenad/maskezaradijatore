@@ -1,26 +1,50 @@
 <main class="page-wrap">
 
-  <!-- Hero -->
   <section class="page-hero">
     <p class="eyebrow">Asortiman</p>
     <h1>Maske za radijatore</h1>
-    <p class="lead">Moderni modeli od plastificiranog lima, izrađeni po meri. Svaki model se prilagođava dimenzijama vašeg radijatora.</p>
+    <p class="lead">Modeli od plastificiranog lima, izrađeni CNC tehnologijom po meri. Svaki model se prilagođava tačnim dimenzijama vašeg radijatora.</p>
   </section>
 
-  <!-- Grid modela -->
   <section class="section-wrap">
     <div class="cards-grid">
-      @for (model of modeli; track model.naziv) {
-        <article class="product-card">
-          <div class="product-img-placeholder">
-            <img src="assets/maska-za-radijator.png" [alt]="model.naziv" loading="lazy" />
-          </div>
+      @for (maska of maske; track maska.id) {
+        <article
+          class="product-card"
+          itemscope
+          itemtype="https://schema.org/Product"
+        >
+          <a routerLink="/maska-za-radijator-po-meri" class="block overflow-hidden rounded-t-2xl">
+            <img
+              [src]="maska.slike[0]"
+              [alt]="maska.schemaAlt"
+              class="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+              itemprop="image"
+              loading="lazy"
+            />
+          </a>
+
           <div class="product-info">
-            <h2>{{ model.naziv }}</h2>
-            <p class="product-material">{{ model.materijal }}</p>
-            <p class="product-desc">{{ model.opis }}</p>
-            <div class="product-footer">
-              <span class="product-price">{{ model.cena | number }} RSD</span>
+            <h2 itemprop="name">{{ maska.naziv }}</h2>
+            <p class="product-material">{{ maska.materijal }}</p>
+            <p class="product-desc" itemprop="description">{{ maska.opis }}</p>
+
+            <div class="flex flex-wrap gap-1.5 pb-2">
+              @for (k of maska.karakteristike; track k) {
+                <span class="text-[11px] font-medium bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">{{ k }}</span>
+              }
+            </div>
+
+            <div
+              class="product-footer"
+              itemprop="offers"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <span class="product-price">{{ formatCena(maska.cena) }} RSD</span>
+              <meta itemprop="price" [content]="maska.cena.toString()" />
+              <meta itemprop="priceCurrency" content="RSD" />
+              <link itemprop="availability" href="https://schema.org/InStock" />
               <a [href]="phoneHref" class="btn-primary">Pozovi za ponudu</a>
             </div>
           </div>
@@ -29,17 +53,15 @@
     </div>
   </section>
 
-  <!-- SEO tekst -->
   <section class="seo-section">
     <h2>Zašto izabrati naše maske za radijatore?</h2>
     <p>
-      <strong>Maske za radijatore</strong> su praktično i estetski rešenje za svaki dom ili kancelariju. Naši modeli su izrađeni od
-      visokokvalitetnog plastificiranog lima pomoću CNC tehnologije, što garantuje preciznost i dugotrajnost.
-      Svaka <strong>maska za radijator</strong> se izrađuje prema vašim dimenzijama, u boji i uzorku po vašem izboru.
+      <strong>Maske za radijatore</strong> od plastificiranog lima su praktično i estetski rešenje za svaki dom ili kancelariju.
+      Izrađujemo CNC tehnologijom koja garantuje preciznost i dugotrajnost. Svaka <strong>maska za radijator</strong>
+      se prilagođava tačnim merama u boji i uzorku po vašem izboru.
     </p>
     <p>
-      Pored estetske funkcije, dobro dizajnirana maska ne smanjuje efikasnost grejanja – naprotiv, naši perforisani
-      modeli i modeli sa lamelama omogućavaju nesmetano strujanje toplog vazduha.
+      Naši perforisani i lamelni modeli omogućavaju nesmetano strujanje toplog vazduha – bez gubitka efikasnosti grejanja.
     </p>
     <div class="seo-links">
       <a routerLink="/maske-za-radijatore-cena">Pogledaj cene →</a>

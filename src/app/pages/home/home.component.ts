@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { MaskeService } from '../../core/services/maske.service';
+import { Maska } from '../../core/models/maska.model';
 
 @Component({
   selector: 'app-home',
@@ -11,25 +13,14 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  private maskeService = inject(MaskeService);
+
   phoneHref = 'tel:+381659775995';
   phoneDisplay = '065 977 5995';
 
-  product = {
-    naziv: 'Dekorativna maska za radijator',
-    slug: 'maska-za-radijator',
-    opis:
-      'Metalna maska za radijator od plastificiranog lima, moderna zaštita i elegantno rešenje za lepši enterijer.',
-    cena: 12480,
-    popust: 0,
-    novo: true,
-    slika: [
-      {
-        url: 'assets/maska-za-radijator.png'
-      }
-    ]
-  };
+  maske: Maska[] = this.maskeService.getAll();
 
-  get priceFormatted(): string {
-    return this.product.cena.toLocaleString('sr-RS');
+  formatCena(cena: number): string {
+    return this.maskeService.formatCena(cena);
   }
 }

@@ -8,22 +8,26 @@
 
   <section class="section-wrap">
     <div class="gallery-grid">
-      <figure class="gallery-item">
-        <img src="assets/maska-za-radijator.png" alt="Maska za radijator u dnevnoj sobi" loading="lazy" />
-        <figcaption>Dnevna soba – perforisana maska, bela</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="assets/maska-za-radijator.png" alt="Maska za radijator u spavaćoj sobi" loading="lazy" />
-        <figcaption>Spavaća soba – maska sa lamelama, antracit</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="assets/maska-za-radijator.png" alt="Maska za radijator u kancelariji" loading="lazy" />
-        <figcaption>Kancelarija – standardna maska, bela</figcaption>
-      </figure>
+      @for (maska of maske; track maska.id) {
+        <figure class="gallery-item">
+          <img
+            [src]="maska.slike[0]"
+            [alt]="maska.schemaAlt"
+            loading="lazy"
+          />
+          <figcaption>
+            <strong>{{ maska.naziv }}</strong>
+            <span>{{ maska.kratakOpis }}</span>
+          </figcaption>
+        </figure>
+      }
     </div>
+
     <p class="gallery-note">
-      Više fotografija dostupno na <a href="https://www.instagram.com/maske_za_klimu" target="_blank" rel="noopener">Instagramu</a>.
-      Imate vaš radijator? <a [href]="phoneHref">Pozovite nas</a> i napravimo masku po meri.
+      Više fotografija dostupno na
+      <a href="https://www.instagram.com/maske_za_klimu" target="_blank" rel="noopener">Instagramu</a>.
+      Imate vaš radijator?
+      <a [href]="phoneHref">Pozovite nas</a> i napravimo masku po meri.
     </p>
   </section>
 
