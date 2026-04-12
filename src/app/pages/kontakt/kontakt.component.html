@@ -1,0 +1,59 @@
+<main class="page-wrap">
+
+  <section class="page-hero">
+    <p class="eyebrow">Stupite u kontakt</p>
+    <h1>Kontakt</h1>
+    <p class="lead">Pozovite nas ili pošaljite upit. Odgovaramo brzo i pomažemo vam da izaberete pravo rešenje za vaš radijator.</p>
+  </section>
+
+  <section class="section-wrap">
+    <div class="kontakt-grid">
+
+      <!-- Leva strana – info -->
+      <div class="kontakt-info">
+        <div class="info-card">
+          <p class="eyebrow">Telefon</p>
+          <a [href]="phoneHref" class="big-phone">{{ phoneDisplay }}</a>
+          <p class="info-sub">Dostupni radnim danima 09:00 – 17:00</p>
+        </div>
+
+        <div class="info-card">
+          <p class="eyebrow">Adresa</p>
+          <p class="info-main">Vučačka 16, 11300 Smederevo</p>
+          <p class="info-sub">Dostavljamo na adresu širom Srbije.</p>
+        </div>
+
+        <div class="info-card">
+          <p class="eyebrow">Radno vreme</p>
+          <p class="info-main">Pon – Pet: 09:00 – 17:00</p>
+          <p class="info-sub">Subota i nedjelja: zatvoreno</p>
+        </div>
+      </div>
+
+      <!-- Desna strana – CTA -->
+      <div class="kontakt-cta-box">
+        <h2>Kako da naručite?</h2>
+        <ol class="order-steps">
+          <li>Izmervite radijator (širina × visina × dubina)</li>
+          <li>Pozovite nas i saopštite dimenzije</li>
+          <li>Dogovorite se oko uzorka, boje i cene</li>
+          <li>Maska se izrađuje i šalje na vašu adresu</li>
+        </ol>
+        <a [href]="phoneHref" class="btn-primary btn-lg">
+          Pozovi odmah – {{ phoneDisplay }}
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEO lokalni tekst -->
+  <section class="seo-section">
+    <h2>Dostava maski za radijatore širom Srbije</h2>
+    <p>
+      Nalazimo se u Smederevu, ali dostavljamo <strong>maske za radijatore</strong> na adrese u celoj Srbiji –
+      Beograd, Novi Sad, Niš, Kragujevac, Subotica, Čačak i ostali gradovi. Rok isporuke je obično 5–10 radnih dana od potvrde porudžbine.
+    </p>
+  </section>
+
+</main>

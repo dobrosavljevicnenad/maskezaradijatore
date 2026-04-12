@@ -1,0 +1,62 @@
+<main class="page-wrap">
+
+  <section class="page-hero">
+    <p class="eyebrow">Prilagođena izrada</p>
+    <h1>Maska za radijator po meri</h1>
+    <p class="lead">Svaki radijator je drugačiji. Izradimo masku tačno prema vašim dimenzijama – bez kompromisa u izgledu.</p>
+  </section>
+
+  <!-- Koraci -->
+  <section class="section-wrap">
+    <h2 class="section-title">Kako funkcioniše izrada po meri?</h2>
+    <div class="steps-grid">
+      @for (korak of koraci; track korak.broj) {
+        <div class="step-card">
+          <span class="step-num">{{ korak.broj }}</span>
+          <h3>{{ korak.naziv }}</h3>
+          <p>{{ korak.opis }}</p>
+        </div>
+      }
+    </div>
+    <div class="step-cta">
+      <a [href]="phoneHref" class="btn-primary">Pozovi – {{ phoneDisplay }}</a>
+    </div>
+  </section>
+
+  <!-- Šta je potrebno -->
+  <section class="section-wrap alt-bg">
+    <h2 class="section-title">Šta treba da izmerite?</h2>
+    <div class="measure-grid">
+      <div class="measure-card">
+        <strong>Širina</strong>
+        <p>Ukupna širina radijatora od zida do zida (ili od ivice do ivice).</p>
+      </div>
+      <div class="measure-card">
+        <strong>Visina</strong>
+        <p>Rastojanje od poda do vrha radijatora, plus malo slobodnog prostora.</p>
+      </div>
+      <div class="measure-card">
+        <strong>Dubina</strong>
+        <p>Koliko radijator strši od zida – važno za pravilno dimenzionisanje bokov.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section">
+    <h2>Zašto naručiti masku za radijator po meri?</h2>
+    <p>
+      Gotove maske sa police retko odgovaraju tačnim dimenzijama radijatora. <strong>Maska za radijator po meri</strong>
+      garantuje savršen spoj, profesionalan izgled i dugotrajnost. Izrađujemo maske CNC tehnologijom od
+      plastificiranog lima u različitim bojama i uzorcima.
+    </p>
+    <p>
+      Pošaljite nam dimenzije, odaberite uzorak i boju, a mi ćemo vam u roku od 5–10 radnih dana dostaviti
+      gotovu masku direktno na adresu, bilo gde u Srbiji – Beograd, Novi Sad, Niš, Kragujevac i ostali gradovi.
+    </p>
+    <div class="seo-links">
+      <a routerLink="/maske-za-radijatore-cena">Pogledaj cene →</a>
+      <a routerLink="/metalne-maske-za-radijatore">Metalne maske →</a>
+    </div>
+  </section>
+
+</main>

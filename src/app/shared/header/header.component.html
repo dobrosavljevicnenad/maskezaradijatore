@@ -1,0 +1,67 @@
+<header
+  class="site-header"
+  [class.scrolled]="scrolled()"
+>
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a routerLink="/" class="logo" (click)="closeMenu()" aria-label="Maske za radijatore – početna">
+      <img src="assets/logo.png" alt="Maske za radijatore logo" height="38" width="auto" />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="nav-desktop" aria-label="Glavna navigacija">
+      @for (link of navLinks; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="nav-active"
+          [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+          class="nav-link"
+        >{{ link.label }}</a>
+      }
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a [href]="phoneHref" class="btn-call" aria-label="Pozovi nas">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+      </svg>
+      <span>{{ phoneDisplay }}</span>
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      class="hamburger"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Otvori meni"
+      aria-controls="mobile-menu"
+    >
+      <span class="bar" [class.open]="menuOpen()"></span>
+      <span class="bar" [class.open]="menuOpen()"></span>
+      <span class="bar" [class.open]="menuOpen()"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="mobile-menu"
+    [class.open]="menuOpen()"
+    role="navigation"
+    aria-label="Mobilna navigacija"
+  >
+    @for (link of navLinks; track link.path) {
+      <a
+        [routerLink]="link.path"
+        routerLinkActive="nav-active"
+        [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+        class="mobile-link"
+        (click)="closeMenu()"
+      >{{ link.label }}</a>
+    }
+    <a [href]="phoneHref" class="mobile-cta" (click)="closeMenu()">
+      Pozovi odmah – {{ phoneDisplay }}
+    </a>
+  </div>
+</header>

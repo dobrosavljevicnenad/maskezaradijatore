@@ -1,0 +1,36 @@
+<main class="page-wrap">
+
+  <section class="page-hero">
+    <p class="eyebrow">Korisni saveti</p>
+    <h1>Blog o maskama za radijatore</h1>
+    <p class="lead">Vodiči, saveti i odgovori na najčešća pitanja o maskama za radijatore.</p>
+  </section>
+
+  <section class="section-wrap">
+    <div class="blog-grid">
+      @for (clanak of clanci; track clanak.slug) {
+        <article class="blog-card">
+          <time class="blog-date" [attr.datetime]="clanak.datum">{{ clanak.datum | date:'dd. MM. yyyy.' }}</time>
+          <h2>
+            <a [routerLink]="'/' + clanak.slug">{{ clanak.naslov }}</a>
+          </h2>
+          <p>{{ clanak.opis }}</p>
+          <a [routerLink]="'/' + clanak.slug" class="blog-read-more">Pročitaj više →</a>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="seo-section">
+    <h2>Sve o maskama za radijatore</h2>
+    <p>
+      Na ovom blogu objavljujemo korisne tekstove o <strong>maskama za radijatore</strong> – od izbora pravog modela
+      i materijala, do načina naručivanja i montaže. Ako imate pitanje koje nije pokriveno, slobodno nas pozovite.
+    </p>
+    <div class="seo-links">
+      <a routerLink="/maske-za-radijatore">Pogledaj modele →</a>
+      <a routerLink="/kontakt">Kontaktirajte nas →</a>
+    </div>
+  </section>
+
+</main>

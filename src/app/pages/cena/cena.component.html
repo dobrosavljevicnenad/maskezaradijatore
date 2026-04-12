@@ -1,0 +1,49 @@
+<main class="page-wrap">
+
+  <section class="page-hero">
+    <p class="eyebrow">Transparentnost</p>
+    <h1>Maske za radijatore – cena</h1>
+    <p class="lead">Cene zavise od dimenzija, uzorka i boje. Prikazujemo okvirne cene – konačna ponuda se dobija nakon slanja dimenzija.</p>
+  </section>
+
+  <section class="section-wrap">
+    <div class="price-table">
+      @for (s of stavke; track s.naziv) {
+        <div class="price-row">
+          <span class="price-naziv">{{ s.naziv }}</span>
+          <span class="price-val">
+            @if (s.cenaDo) {
+              {{ s.cenaOd | number:'1.0-0' }} – {{ s.cenaDo | number:'1.0-0' }} RSD
+            } @else {
+              od {{ s.cenaOd | number:'1.0-0' }} RSD
+            }
+          </span>
+        </div>
+      }
+    </div>
+
+    <div class="cena-note">
+      <p>Konačna cena se utvrđuje nakon dostavljanja tačnih dimenzija. Pozovite nas za besplatnu procenu.</p>
+      <a [href]="phoneHref" class="btn-primary">Pozovi za ponudu – {{ phoneDisplay }}</a>
+    </div>
+  </section>
+
+  <section class="seo-section">
+    <h2>Šta utiče na cenu maske za radijator?</h2>
+    <p>
+      <strong>Cena maske za radijator</strong> zavisi od nekoliko faktora: dimenzija radijatora, odabranog uzorka perforiranag
+      lima, boje praškom bojene površine i složenosti izrade. Standardni modeli za radijatore do 60 cm širine
+      dostupni su već od <strong>10.980 RSD</strong>, dok su veći formati i po meri izrađeni modeli nešto skuplje.
+    </p>
+    <p>
+      Za razliku od gotovih maski sa police, naše <strong>maske za radijatore po meri</strong> se prilagođavaju
+      tačnim merama, bez kompromisa u izgledu ili funkcionalnosti. Svaki radijator je drugačiji, i svaka maska
+      treba da bude savršeno skrojena.
+    </p>
+    <div class="seo-links">
+      <a routerLink="/maska-za-radijator-po-meri">Naruči po meri →</a>
+      <a routerLink="/maske-za-radijatore">Pogledaj modele →</a>
+    </div>
+  </section>
+
+</main>

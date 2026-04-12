@@ -1,0 +1,49 @@
+<main class="page-wrap">
+
+  <section class="page-hero">
+    <p class="eyebrow">Dostupnost</p>
+    <h1>Gde kupiti masku za radijator?</h1>
+    <p class="lead">Naručite direktno od proizvođača. Dostavljamo na adresu u celoj Srbiji.</p>
+  </section>
+
+  <section class="section-wrap">
+    <div class="kontakt-grid">
+      <div class="kontakt-info">
+        <div class="info-card">
+          <p class="eyebrow">Naručite telefonom</p>
+          <a [href]="phoneHref" class="big-phone">{{ phoneDisplay }}</a>
+          <p class="info-sub">Pozovite, saopštite dimenzije i dogovorite se. Brzo i lako.</p>
+        </div>
+        <div class="info-card">
+          <p class="eyebrow">Dostava</p>
+          <p class="info-main">Cela Srbija – 5 do 10 radnih dana</p>
+          <p class="info-sub">Kurirska služba, praćenje pošiljke, pakovanje koje štiti masku.</p>
+        </div>
+      </div>
+      <div class="kontakt-cta-box">
+        <h2>Gradovi u koje dostavljamo</h2>
+        <div class="gradovi-grid">
+          @for (grad of gradovi; track grad) {
+            <span class="grad-tag">{{ grad }}</span>
+          }
+        </div>
+        <p class="info-sub" style="margin-top: 16px">I u sve ostale gradove i mesta u Srbiji.</p>
+        <a [href]="phoneHref" class="btn-primary" style="margin-top: 20px; display: inline-flex">Pozovi za narudžbinu</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seo-section">
+    <h2>Maske za radijatore – direktno od proizvođača</h2>
+    <p>
+      Kupovinom direktno od nas dobijate <strong>masku za radijator</strong> bez posrednika, po najboljoj ceni
+      i sa garancijom kvaliteta. Nalazimo se u Smederevu, ali <strong>maske za radijatore</strong> dostavljamo
+      širom Srbije – od Beograda do Vranja, od Subotice do Niša.
+    </p>
+    <div class="seo-links">
+      <a routerLink="/maske-za-radijatore-cena">Pogledaj cene →</a>
+      <a routerLink="/maska-za-radijator-po-meri">Naruči po meri →</a>
+    </div>
+  </section>
+
+</main>
