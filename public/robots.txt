@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Ne indeksiraj eventualne tehničke rute
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://maskezaradijatore.rs/sitemap.xml
