@@ -97,18 +97,21 @@ export class HomeComponent implements OnDestroy {
       review: [
         {
           '@type': 'Review',
+          itemReviewed: { '@type': 'Product', name: 'Maska za radijator' },
           author: { '@type': 'Person', name: 'Marko Petrović' },
           reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
           reviewBody: 'Odlična maska, savršeno se uklapa u dnevnu sobu. Dimenzije su tačne, materijal kvalitetan.'
         },
         {
           '@type': 'Review',
+          itemReviewed: { '@type': 'Product', name: 'Maska za radijator' },
           author: { '@type': 'Person', name: 'Jelena Nikolić' },
           reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
           reviewBody: 'Naručila sam po meri za nestandardni radijator. Sve isporučeno na vreme i tačno po dogovoru.'
         },
         {
           '@type': 'Review',
+          itemReviewed: { '@type': 'Product', name: 'Maska za radijator' },
           author: { '@type': 'Person', name: 'Stefan Jovanović' },
           reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
           reviewBody: 'Brza dostava, bez problema. Maska izgleda skuplje nego što je koštala.'
