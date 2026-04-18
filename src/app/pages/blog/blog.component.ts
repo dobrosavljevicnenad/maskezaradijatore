@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnDestroy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
+import { SchemaService } from '../../core/services/schema.service';
 
 @Component({
   selector: 'app-blog',
@@ -10,10 +11,25 @@ import { Meta, Title } from '@angular/platform-browser';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'
 })
-export class BlogComponent {
+export class BlogComponent implements OnDestroy {
+  private schema = inject(SchemaService);
+
   constructor(private meta: Meta, private title: Title) {
     this.title.setTitle('Blog – saveti i informacije o maskama za radijatore');
     this.meta.updateTag({ name: 'description', content: 'Blog o maskama za radijatore – saveti, vodiči i odgovori na najčešća pitanja. Kako izabrati, meriti i naručiti masku za radijator.' });
+
+    this.schema.inject('blog-breadcrumb', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Početna', item: 'https://maskezaradijatore.rs/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://maskezaradijatore.rs/blog' }
+      ]
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.schema.remove('blog-breadcrumb');
   }
 
   clanci = [
