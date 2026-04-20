@@ -79,6 +79,22 @@ export class HomeComponent implements OnDestroy {
             '@type': 'Answer',
             text: 'Pozovite 065 977 5995 ili nam pošaljite dimenzije radijatora. Odgovaramo brzo i dajemo konkretnu ponudu.'
           }
+        },
+        {
+          '@type': 'Question',
+          name: 'Da li dostavljate maske za radijatore u Beograd i druge gradove Srbije?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Da, dostavljamo na adresu širom Srbije – Beograd, Novi Sad, Niš, Kragujevac, Subotica i ostale gradove. Dostava kurirskom službom, rok 2–4 radna dana.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Koje boje i uzorci su dostupni za maske za radijatore?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Maske su dostupne u beloj, antracit i RAL bojama. Uzorci uključuju geometrijske perforacije i lamelni dizajn. Prilagođavamo prema vašim željama.'
+          }
         }
       ]
     });
