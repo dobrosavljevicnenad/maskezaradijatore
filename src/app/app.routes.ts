@@ -53,6 +53,21 @@ export const routes: Routes = [
     title: 'Gde kupiti masku za radijator u Srbiji – Beograd, Novi Sad i ostali gradovi'
   },
   {
+    path: 'kako-izmeriti-radijator-za-masku',
+    loadComponent: () => import('./pages/kako-izmeriti-radijator/kako-izmeriti-radijator.component').then(m => m.KakoIzmeritiRadijatorComponent),
+    title: 'Kako izmeriti radijator za masku – vodič korak po korak'
+  },
+  {
+    path: 'montaza-maske-za-radijator',
+    loadComponent: () => import('./pages/montaza-maske-za-radijator/montaza-maske-za-radijator.component').then(m => m.MontazaMaskeZaRadijatorComponent),
+    title: 'Montaža maske za radijator – korak po korak vodič'
+  },
+  {
+    path: 'maska-za-panel-radijator',
+    loadComponent: () => import('./pages/maska-za-panel-radijator/maska-za-panel-radijator.component').then(m => m.MaskaZaPanelRadijatorComponent),
+    title: 'Maska za panel radijator – izrada po meri'
+  },
+  {
     path: 'blog',
     loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent),
     title: 'Blog – saveti i informacije o maskama za radijatore'

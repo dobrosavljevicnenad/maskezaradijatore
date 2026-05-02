@@ -67,10 +67,31 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://maskezaradijatore.rs/kako-izmeriti-radijator-za-masku</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://maskezaradijatore.rs/montaza-maske-za-radijator</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://maskezaradijatore.rs/maska-za-panel-radijator</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://maskezaradijatore.rs/blog</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

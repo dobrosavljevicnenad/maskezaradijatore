@@ -16,8 +16,8 @@ export class GdeKupitiComponent implements OnDestroy {
   private schema = inject(SchemaService);
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Gde kupiti masku za radijator u Srbiji – Beograd, Novi Sad i ostali gradovi');
-    this.meta.updateTag({ name: 'description', content: 'Gde kupiti masku za radijator u Srbiji? Naručite online, dostavljamo u Beograd, Novi Sad, Niš, Kragujevac i celu Srbiju.' });
+    this.title.setTitle('Maska za radijator Beograd, Novi Sad, Niš – dostava po Srbiji');
+    this.meta.updateTag({ name: 'description', content: 'Kupite masku za radijator direktno od proizvođača. Dostavljamo u Beograd, Novi Sad, Niš, Kragujevac i celu Srbiju. Izrada po meri, rok 5–10 radnih dana.' });
 
     this.schema.inject('gde-kupiti-breadcrumb', {
       '@context': 'https://schema.org',
