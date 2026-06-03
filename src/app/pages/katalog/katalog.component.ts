@@ -26,8 +26,8 @@ export class KatalogComponent implements OnDestroy {
   }
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Maske za radijatore – svi modeli i dimenzije | maskezaradijatore.rs');
-    this.meta.updateTag({ name: 'description', content: 'Pogledajte sve modele maski za radijatore od plastificiranog lima. Metalne maske po meri, izbor boja i dimenzija. Dostava širom Srbije.' });
+    this.title.setTitle('Maske za radijatore – svi modeli i cene od 10.980 RSD | maskezaradijatore.rs');
+    this.meta.updateTag({ name: 'description', content: 'Svi modeli maski za radijatore – standardne i nestandardne dimenzije, bela i antracit boja, CNC izrada. Cene od 10.980 RSD, dostava Srbija.' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.schema.inject('katalog-breadcrumb', {
@@ -35,7 +35,7 @@ export class KatalogComponent implements OnDestroy {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Početna', item: 'https://maskezaradijatore.rs/' },
-        { '@type': 'ListItem', position: 2, name: 'Maske za radijatore – svi modeli', item: 'https://maskezaradijatore.rs/maske-za-radijatore' }
+        { '@type': 'ListItem', position: 2, name: 'Maske za radijatore – svi modeli i cene', item: 'https://maskezaradijatore.rs/maske-za-radijatore' }
       ]
     });
   }

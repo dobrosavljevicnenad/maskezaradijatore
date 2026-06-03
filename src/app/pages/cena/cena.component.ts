@@ -17,8 +17,8 @@ export class CenaComponent implements OnDestroy {
   private schema = inject(SchemaService);
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Maske za radijatore cena – koliko košta maska za radijator?');
-    this.meta.updateTag({ name: 'description', content: 'Koliko košta maska za radijator? Cene maski od plastificiranog lima kreću se od 10.980 RSD. Izrada po meri, dostava Srbija.' });
+    this.title.setTitle('Maske za radijatore cena – od 10.980 do 14.480 RSD | maskezaradijatore.rs');
+    this.meta.updateTag({ name: 'description', content: 'Cene maski za radijatore 2026: od 10.980 RSD (standardne) do 14.480+ RSD (jumbo). Izrada po meri, dostava Srbija. Pozovite 065 977 5995 za ponudu.' });
 
     this.schema.inject('cena-breadcrumb', {
       '@context': 'https://schema.org',

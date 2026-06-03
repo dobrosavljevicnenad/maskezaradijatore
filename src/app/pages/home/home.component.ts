@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnDestroy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { Meta, Title } from '@angular/platform-browser';
 import { MaskeService } from '../../core/services/maske.service';
 import { Maska } from '../../core/models/maska.model';
 import { SchemaService } from '../../core/services/schema.service';
@@ -16,6 +17,8 @@ import { SchemaService } from '../../core/services/schema.service';
 export class HomeComponent implements OnDestroy {
   private maskeService = inject(MaskeService);
   private schema = inject(SchemaService);
+  private meta = inject(Meta);
+  private titleService = inject(Title);
 
   phoneHref = 'tel:+381659775995';
   phoneDisplay = '065 977 5995';
@@ -44,6 +47,10 @@ export class HomeComponent implements OnDestroy {
   ];
 
   constructor() {
+    this.titleService.setTitle('Maske za radijatore – cene od 10.980 RSD, izrada po meri | maskezaradijatore.rs');
+    this.meta.updateTag({ name: 'description', content: 'Dekorativne maske za radijatore od plastificiranog lima – izrada po meri, cene od 10.980 RSD. Dostava širom Srbije 2–4 dana. Pozovite 065 977 5995.' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.schema.inject('home-faq', {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
