@@ -2,6 +2,7 @@ import { Component, inject, OnDestroy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
+import { CanonicalService } from '../../core/services/canonical.service';
 
 @Component({
   selector: 'app-gde-kupiti',
@@ -14,10 +15,12 @@ export class GdeKupitiComponent implements OnDestroy {
   readonly phoneHref = 'tel:+381659775995';
   readonly phoneDisplay = '065 977 5995';
   private schema = inject(SchemaService);
+  private canonical = inject(CanonicalService);
 
   constructor(private meta: Meta, private title: Title) {
     this.title.setTitle('Maska za radijator Beograd, Novi Sad, Niš – dostava po Srbiji');
     this.meta.updateTag({ name: 'description', content: 'Kupite masku za radijator direktno od proizvođača. Dostavljamo u Beograd, Novi Sad, Niš, Kragujevac i celu Srbiju. Izrada po meri, rok 5–10 radnih dana.' });
+    this.canonical.set('https://maskezaradijatore.rs/gde-kupiti-masku-za-radijator');
 
     this.schema.inject('gde-kupiti-breadcrumb', {
       '@context': 'https://schema.org',

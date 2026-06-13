@@ -2,6 +2,7 @@ import { Component, inject, OnDestroy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
+import { CanonicalService } from '../../core/services/canonical.service';
 
 @Component({
   selector: 'app-montaza-maske-za-radijator',
@@ -13,10 +14,12 @@ import { SchemaService } from '../../core/services/schema.service';
 export class MontazaMaskeZaRadijatorComponent implements OnDestroy {
   readonly phoneHref = 'tel:+381659775995';
   private schema = inject(SchemaService);
+  private canonical = inject(CanonicalService);
 
   constructor(private meta: Meta, private title: Title) {
     this.title.setTitle('Montaža maske za radijator – korak po korak vodič');
     this.meta.updateTag({ name: 'description', content: 'Kako se montira maska za radijator? Postavljanje je jednostavno, traje 15–30 minuta i ne zahteva majstora ni bušenje. Detaljan vodič.' });
+    this.canonical.set('https://maskezaradijatore.rs/montaza-maske-za-radijator');
 
     this.schema.inject('montaza-breadcrumb', {
       '@context': 'https://schema.org',

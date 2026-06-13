@@ -4,6 +4,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { MaskeService } from '../../core/services/maske.service';
 import { Maska } from '../../core/models/maska.model';
 import { SchemaService } from '../../core/services/schema.service';
+import { CanonicalService } from '../../core/services/canonical.service';
 
 @Component({
   selector: 'app-galerija',
@@ -15,6 +16,7 @@ import { SchemaService } from '../../core/services/schema.service';
 export class GalerijaComponent implements OnDestroy {
   private maskeService = inject(MaskeService);
   private schema = inject(SchemaService);
+  private canonical = inject(CanonicalService);
 
   readonly phoneHref = 'tel:+381659775995';
 
@@ -23,6 +25,7 @@ export class GalerijaComponent implements OnDestroy {
   constructor(private meta: Meta, private title: Title) {
     this.title.setTitle('Galerija maski za radijatore – primeri iz prakse');
     this.meta.updateTag({ name: 'description', content: 'Pogledajte galeriju naših maski za radijatore. Primeri iz stvarnih enterijera – dnevne sobe, spavaće sobe, kancelarije.' });
+    this.canonical.set('https://maskezaradijatore.rs/galerija');
 
     this.schema.inject('galerija-breadcrumb', {
       '@context': 'https://schema.org',

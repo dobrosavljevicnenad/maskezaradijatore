@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
+import { CanonicalService } from '../../core/services/canonical.service';
 
 @Component({
   selector: 'app-blog',
@@ -13,10 +14,12 @@ import { SchemaService } from '../../core/services/schema.service';
 })
 export class BlogComponent implements OnDestroy {
   private schema = inject(SchemaService);
+  private canonical = inject(CanonicalService);
 
   constructor(private meta: Meta, private title: Title) {
     this.title.setTitle('Blog – saveti i informacije o maskama za radijatore');
     this.meta.updateTag({ name: 'description', content: 'Blog o maskama za radijatore – saveti, vodiči i odgovori na najčešća pitanja. Kako izabrati, meriti i naručiti masku za radijator.' });
+    this.canonical.set('https://maskezaradijatore.rs/blog');
 
     this.schema.inject('blog-breadcrumb', {
       '@context': 'https://schema.org',

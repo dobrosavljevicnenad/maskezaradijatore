@@ -6,6 +6,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { MaskeService } from '../../core/services/maske.service';
 import { Maska } from '../../core/models/maska.model';
 import { SchemaService } from '../../core/services/schema.service';
+import { CanonicalService } from '../../core/services/canonical.service';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import { SchemaService } from '../../core/services/schema.service';
 export class HomeComponent implements OnDestroy {
   private maskeService = inject(MaskeService);
   private schema = inject(SchemaService);
+  private canonical = inject(CanonicalService);
   private meta = inject(Meta);
   private titleService = inject(Title);
 
@@ -47,9 +49,10 @@ export class HomeComponent implements OnDestroy {
   ];
 
   constructor() {
-    this.titleService.setTitle('Maske za radijatore – cene od 10.980 RSD, izrada po meri | maskezaradijatore.rs');
-    this.meta.updateTag({ name: 'description', content: 'Dekorativne maske za radijatore od plastificiranog lima – izrada po meri, cene od 10.980 RSD. Dostava širom Srbije 2–4 dana. Pozovite 065 977 5995.' });
+    this.titleService.setTitle('Maska za radijator – maske za radijatore od 10.980 RSD | maskezaradijatore.rs');
+    this.meta.updateTag({ name: 'description', content: 'Dekorativna maska za radijator od plastificiranog lima – izrada po vašim merama. Cene od 10.980 RSD, dostava 2–4 dana po Srbiji. Pozovite 065 977 5995.' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.canonical.set('https://maskezaradijatore.rs/');
 
     this.schema.inject('home-faq', {
       '@context': 'https://schema.org',
@@ -101,6 +104,22 @@ export class HomeComponent implements OnDestroy {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Maske su dostupne u beloj, antracit i RAL bojama. Uzorci uključuju geometrijske perforacije i lamelni dizajn. Prilagođavamo prema vašim željama.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Da li imate gotove maske za radijatore koje ne zahtevaju merenje?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Imamo standardne dimenzije koje odgovaraju većini radijatora, ali svaku masku izrađujemo tek nakon primanja vaših mera. Izradu po meri preporučujemo jer svaki radijator ima različite dimenzije, a maska po meri garantuje savršeno prileganje bez zazora.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Koliko traje isporuka maske za radijator?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Rok isporuke je 5–10 radnih dana od potvrde narudžbine. Dostavljamo kurirskom službom na adresu u Srbiji – Beograd, Novi Sad, Niš, Kragujevac i svi drugi gradovi.'
           }
         }
       ]

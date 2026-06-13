@@ -4,6 +4,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { MaskeService } from '../../core/services/maske.service';
 import { Maska } from '../../core/models/maska.model';
 import { SchemaService } from '../../core/services/schema.service';
+import { CanonicalService } from '../../core/services/canonical.service';
 
 @Component({
   selector: 'app-katalog',
@@ -15,6 +16,7 @@ import { SchemaService } from '../../core/services/schema.service';
 export class KatalogComponent implements OnDestroy {
   private maskeService = inject(MaskeService);
   private schema = inject(SchemaService);
+  private canonical = inject(CanonicalService);
 
   readonly phoneHref = 'tel:+381659775995';
   readonly phoneDisplay = '065 977 5995';
@@ -26,9 +28,10 @@ export class KatalogComponent implements OnDestroy {
   }
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Maske za radijatore – svi modeli i cene od 10.980 RSD | maskezaradijatore.rs');
-    this.meta.updateTag({ name: 'description', content: 'Svi modeli maski za radijatore – standardne i nestandardne dimenzije, bela i antracit boja, CNC izrada. Cene od 10.980 RSD, dostava Srbija.' });
+    this.title.setTitle('Maske za radijatore – gotove i po meri, cene od 10.980 RSD | maskezaradijatore.rs');
+    this.meta.updateTag({ name: 'description', content: 'Svi modeli maski za radijatore – standardne (gotove) i po meri, bela i antracit boja, CNC izrada od plastificiranog lima. Cene od 10.980 RSD, dostava Srbija.' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.canonical.set('https://maskezaradijatore.rs/maske-za-radijatore');
 
     this.schema.inject('katalog-breadcrumb', {
       '@context': 'https://schema.org',
