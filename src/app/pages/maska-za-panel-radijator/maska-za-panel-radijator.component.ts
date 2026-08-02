@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
 import { CanonicalService } from '../../core/services/canonical.service';
+import { SocialMetaService } from '../../core/services/social-meta.service';
 
 @Component({
   selector: 'app-maska-za-panel-radijator',
@@ -15,11 +16,17 @@ export class MaskaZaPanelRadijatorComponent implements OnDestroy {
   readonly phoneHref = 'tel:+381659775995';
   private schema = inject(SchemaService);
   private canonical = inject(CanonicalService);
+  private social = inject(SocialMetaService);
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Maska za panel radijator – izrada po meri | maskezaradijatore.rs');
-    this.meta.updateTag({ name: 'description', content: 'Maske za panel radijatore izrađujemo po meri – uz otvor za ventil i termostat. Cena od 6.000 din. Dostava širom Srbije.' });
-    this.canonical.set('https://maskezaradijatore.rs/maska-za-panel-radijator');
+    const seoTitle = 'Maska za panel radijator – izrada po meri | maskezaradijatore.rs';
+    const description = 'Maske za panel radijatore izrađujemo po meri – uz otvor za ventil i termostat. Dostava širom Srbije.';
+    const url = 'https://maskezaradijatore.rs/maska-za-panel-radijator';
+
+    this.title.setTitle(seoTitle);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.canonical.set(url);
+    this.social.set({ title: seoTitle, description, url });
 
     this.schema.inject('panel-radijator-breadcrumb', {
       '@context': 'https://schema.org',

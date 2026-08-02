@@ -4,6 +4,7 @@ import { DecimalPipe } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
 import { CanonicalService } from '../../core/services/canonical.service';
+import { SocialMetaService } from '../../core/services/social-meta.service';
 
 @Component({
   selector: 'app-cena',
@@ -17,12 +18,18 @@ export class CenaComponent implements OnDestroy {
   readonly phoneDisplay = '065 977 5995';
   private schema = inject(SchemaService);
   private canonical = inject(CanonicalService);
+  private social = inject(SocialMetaService);
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Maska za radijator cena 2026 – od 10.980 do 14.480 RSD | maskezaradijatore.rs');
-    this.meta.updateTag({ name: 'description', content: 'Koliko košta maska za radijator? Od 10.980 RSD (standardna) do 14.480+ RSD (jumbo format). Izrada po meri, dostava Srbija. ☎ 065 977 5995 za ponudu.' });
+    const seoTitle = 'Maska za radijator cena 2026 – od 10.980 do 14.480 RSD | maskezaradijatore.rs';
+    const description = 'Pogledajte cenovnik maski za radijatore po dimenzijama i modelima – standardna, srednja, velika i jumbo veličina. Izrada po meri, dostava Srbija. ☎ 065 977 5995 za ponudu.';
+    const url = 'https://maskezaradijatore.rs/maske-za-radijatore-cena';
+
+    this.title.setTitle(seoTitle);
+    this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.canonical.set('https://maskezaradijatore.rs/maske-za-radijatore-cena');
+    this.canonical.set(url);
+    this.social.set({ title: seoTitle, description, url });
 
     this.schema.inject('cena-breadcrumb', {
       '@context': 'https://schema.org',

@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
 import { CanonicalService } from '../../core/services/canonical.service';
+import { SocialMetaService } from '../../core/services/social-meta.service';
 
 @Component({
   selector: 'app-po-meri',
@@ -16,11 +17,17 @@ export class PoMeriComponent implements OnDestroy {
   readonly phoneDisplay = '065 977 5995';
   private schema = inject(SchemaService);
   private canonical = inject(CanonicalService);
+  private social = inject(SocialMetaService);
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Maska za radijator po meri – izrada prema vašim dimenzijama');
-    this.meta.updateTag({ name: 'description', content: 'Naručite masku za radijator po meri. Pošaljite dimenzije, mi izradimo i dostavimo na adresu. CNC izrada, plastificirani lim, Srbija.' });
-    this.canonical.set('https://maskezaradijatore.rs/maska-za-radijator-po-meri');
+    const seoTitle = 'Maska za radijator po meri – izrada prema vašim dimenzijama';
+    const description = 'Naručite masku za radijator po meri. Pošaljite dimenzije, mi izradimo i dostavimo na adresu. CNC izrada, plastificirani lim, Srbija.';
+    const url = 'https://maskezaradijatore.rs/maska-za-radijator-po-meri';
+
+    this.title.setTitle(seoTitle);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.canonical.set(url);
+    this.social.set({ title: seoTitle, description, url });
 
     this.schema.inject('po-meri-breadcrumb', {
       '@context': 'https://schema.org',
@@ -30,10 +37,42 @@ export class PoMeriComponent implements OnDestroy {
         { '@type': 'ListItem', position: 2, name: 'Maska za radijator po meri', item: 'https://maskezaradijatore.rs/maska-za-radijator-po-meri' }
       ]
     });
+
+    this.schema.inject('po-meri-faq', {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Kako se naručuje maska za radijator po meri?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Izmerite radijator (širinu, visinu i dubinu), pošaljite nam dimenzije i željenu boju ili uzorak, a mi izrađujemo CNC tehnologijom i dostavljamo u roku od 5 do 10 radnih dana.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Koje mere su potrebne za izradu maske po meri?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Potrebne su tri mere: širina, visina i dubina radijatora, kao i razmak od zida.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Da li se maska po meri dostavlja u sve gradove Srbije?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Da, dostavljamo gotovu masku direktno na adresu bilo gde u Srbiji – Beograd, Novi Sad, Niš, Kragujevac i ostali gradovi.'
+          }
+        }
+      ]
+    });
   }
 
   ngOnDestroy(): void {
     this.schema.remove('po-meri-breadcrumb');
+    this.schema.remove('po-meri-faq');
   }
 
   koraci = [

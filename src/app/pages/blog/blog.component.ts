@@ -4,6 +4,7 @@ import { DatePipe } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
 import { CanonicalService } from '../../core/services/canonical.service';
+import { SocialMetaService } from '../../core/services/social-meta.service';
 
 @Component({
   selector: 'app-blog',
@@ -15,11 +16,17 @@ import { CanonicalService } from '../../core/services/canonical.service';
 export class BlogComponent implements OnDestroy {
   private schema = inject(SchemaService);
   private canonical = inject(CanonicalService);
+  private social = inject(SocialMetaService);
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Blog – saveti i informacije o maskama za radijatore');
-    this.meta.updateTag({ name: 'description', content: 'Blog o maskama za radijatore – saveti, vodiči i odgovori na najčešća pitanja. Kako izabrati, meriti i naručiti masku za radijator.' });
-    this.canonical.set('https://maskezaradijatore.rs/blog');
+    const seoTitle = 'Blog – saveti i informacije o maskama za radijatore';
+    const description = 'Blog o maskama za radijatore – saveti, vodiči i odgovori na najčešća pitanja. Kako izabrati, meriti i naručiti masku za radijator.';
+    const url = 'https://maskezaradijatore.rs/blog';
+
+    this.title.setTitle(seoTitle);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.canonical.set(url);
+    this.social.set({ title: seoTitle, description, url });
 
     this.schema.inject('blog-breadcrumb', {
       '@context': 'https://schema.org',
@@ -29,10 +36,34 @@ export class BlogComponent implements OnDestroy {
         { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://maskezaradijatore.rs/blog' }
       ]
     });
+
+    this.schema.inject('blog-faq', {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'O čemu se piše na blogu maskezaradijatore.rs?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Objavljujemo korisne tekstove o maskama za radijatore – od izbora pravog modela i materijala, do načina naručivanja i montaže.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Šta ako moje pitanje o maskama za radijatore nije pokriveno na blogu?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Slobodno nas pozovite – odgovaramo na sva pitanja i pomažemo da izaberete pravo rešenje za vaš radijator.'
+          }
+        }
+      ]
+    });
   }
 
   ngOnDestroy(): void {
     this.schema.remove('blog-breadcrumb');
+    this.schema.remove('blog-faq');
   }
 
   clanci = [

@@ -7,6 +7,7 @@ import { MaskeService } from '../../core/services/maske.service';
 import { Maska } from '../../core/models/maska.model';
 import { SchemaService } from '../../core/services/schema.service';
 import { CanonicalService } from '../../core/services/canonical.service';
+import { SocialMetaService } from '../../core/services/social-meta.service';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomeComponent implements OnDestroy {
   private maskeService = inject(MaskeService);
   private schema = inject(SchemaService);
   private canonical = inject(CanonicalService);
+  private social = inject(SocialMetaService);
   private meta = inject(Meta);
   private titleService = inject(Title);
 
@@ -49,10 +51,15 @@ export class HomeComponent implements OnDestroy {
   ];
 
   constructor() {
-    this.titleService.setTitle('Maska za radijator – maske za radijatore od 10.980 RSD | maskezaradijatore.rs');
-    this.meta.updateTag({ name: 'description', content: 'Dekorativna maska za radijator od plastificiranog lima – izrada po vašim merama. Cene od 10.980 RSD, dostava 2–4 dana po Srbiji. Pozovite 065 977 5995.' });
+    const title = 'Maska za radijator – maske za radijatore od 10.980 RSD | maskezaradijatore.rs';
+    const description = 'Dekorativna maska za radijator od plastificiranog lima – izrada po vašim merama, dostava 2–4 dana po Srbiji. Pozovite 065 977 5995.';
+    const url = 'https://maskezaradijatore.rs/';
+
+    this.titleService.setTitle(title);
+    this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.canonical.set('https://maskezaradijatore.rs/');
+    this.canonical.set(url);
+    this.social.set({ title, description, url });
 
     this.schema.inject('home-faq', {
       '@context': 'https://schema.org',

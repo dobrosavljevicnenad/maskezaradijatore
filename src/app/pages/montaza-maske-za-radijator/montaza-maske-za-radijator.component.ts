@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
 import { CanonicalService } from '../../core/services/canonical.service';
+import { SocialMetaService } from '../../core/services/social-meta.service';
 
 @Component({
   selector: 'app-montaza-maske-za-radijator',
@@ -15,11 +16,17 @@ export class MontazaMaskeZaRadijatorComponent implements OnDestroy {
   readonly phoneHref = 'tel:+381659775995';
   private schema = inject(SchemaService);
   private canonical = inject(CanonicalService);
+  private social = inject(SocialMetaService);
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Montaža maske za radijator – korak po korak vodič');
-    this.meta.updateTag({ name: 'description', content: 'Kako se montira maska za radijator? Postavljanje je jednostavno, traje 15–30 minuta i ne zahteva majstora ni bušenje. Detaljan vodič.' });
-    this.canonical.set('https://maskezaradijatore.rs/montaza-maske-za-radijator');
+    const seoTitle = 'Montaža maske za radijator – korak po korak vodič';
+    const description = 'Kako se montira maska za radijator? Postavljanje je jednostavno, traje 15–30 minuta i ne zahteva majstora ni bušenje. Detaljan vodič.';
+    const url = 'https://maskezaradijatore.rs/montaza-maske-za-radijator';
+
+    this.title.setTitle(seoTitle);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.canonical.set(url);
+    this.social.set({ title: seoTitle, description, url });
 
     this.schema.inject('montaza-breadcrumb', {
       '@context': 'https://schema.org',

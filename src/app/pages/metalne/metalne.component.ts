@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { SchemaService } from '../../core/services/schema.service';
 import { CanonicalService } from '../../core/services/canonical.service';
+import { SocialMetaService } from '../../core/services/social-meta.service';
 
 @Component({
   selector: 'app-metalne',
@@ -16,12 +17,18 @@ export class MetalneComponent implements OnDestroy {
   readonly phoneDisplay = '065 977 5995';
   private schema = inject(SchemaService);
   private canonical = inject(CanonicalService);
+  private social = inject(SocialMetaService);
 
   constructor(private meta: Meta, private title: Title) {
-    this.title.setTitle('Metalne maske za radijatore – plastificirani lim, CNC izrada po meri');
-    this.meta.updateTag({ name: 'description', content: 'Metalne maske za radijatore od plastificiranog lima – trajne, otporne na vlagu, lako se čiste. CNC izrada po meri, bela i antracit boja. Dostava Srbija.' });
+    const seoTitle = 'Metalne maske za radijatore – plastificirani lim, CNC izrada po meri';
+    const description = 'Metalne maske za radijatore od plastificiranog lima – trajne, otporne na vlagu, lako se čiste. CNC izrada po meri, bela i antracit boja. Dostava Srbija.';
+    const url = 'https://maskezaradijatore.rs/metalne-maske-za-radijatore';
+
+    this.title.setTitle(seoTitle);
+    this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.canonical.set('https://maskezaradijatore.rs/metalne-maske-za-radijatore');
+    this.canonical.set(url);
+    this.social.set({ title: seoTitle, description, url });
 
     this.schema.inject('metalne-breadcrumb', {
       '@context': 'https://schema.org',
