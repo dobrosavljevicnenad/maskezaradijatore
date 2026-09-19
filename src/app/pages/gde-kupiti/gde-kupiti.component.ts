@@ -73,6 +73,14 @@ export class GdeKupitiComponent implements OnDestroy {
             '@type': 'Answer',
             text: 'Pored Beograda, Novog Sada i Niša, redovno dostavljamo u Kragujevac, Suboticu, Zrenjanin, Čačak, Pančevo, Valjevo, Šabac, Leskovac, Požarevac, Vranje, Užice i sve ostale gradove u Srbiji.'
           }
+        },
+        {
+          '@type': 'Question',
+          name: 'Gdje kupiti masku za radijator?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Najsigurnije je naručiti direktno od proizvođača, bez posrednika – fiksna cena je 13.480 RSD po komadu. Pozovite 065 977 5995 ili pošaljite dimenzije radijatora.'
+          }
         }
       ]
     });

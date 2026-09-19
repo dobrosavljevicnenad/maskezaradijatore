@@ -21,8 +21,8 @@ export class CenaComponent implements OnDestroy {
   private social = inject(SocialMetaService);
 
   constructor(private meta: Meta, private title: Title) {
-    const seoTitle = 'Maska za radijator cena 2026 – od 10.980 do 14.480 RSD | maskezaradijatore.rs';
-    const description = 'Pogledajte cenovnik maski za radijatore po dimenzijama i modelima – standardna, srednja, velika i jumbo veličina. Izrada po meri, dostava Srbija. ☎ 065 977 5995 za ponudu.';
+    const seoTitle = 'Maska za radijator cena 2026 – fiksno 13.480 RSD za sve modele | maskezaradijatore.rs';
+    const description = 'Cena maske za radijator je fiksna – 13.480 RSD za sve dimenzije i modele, bez skrivenih troškova. Izrada po meri, dostava Srbija. ☎ 065 977 5995 za ponudu.';
     const url = 'https://maskezaradijatore.rs/maske-za-radijatore-cena';
 
     this.title.setTitle(seoTitle);
@@ -49,7 +49,7 @@ export class CenaComponent implements OnDestroy {
           name: 'Koliko košta maska za radijator?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Cena maske za radijator kreće se od 10.980 RSD za standardne dimenzije (do 60 cm širine) do 14.480+ RSD za jumbo format (120 cm+). Konačna cena zavisi od dimenzija, uzorka i boje.'
+            text: 'Cena maske za radijator je fiksna i iznosi 13.480 RSD, bez obzira na dimenzije radijatora, uzorak ili odabranu boju.'
           }
         },
         {
@@ -57,7 +57,7 @@ export class CenaComponent implements OnDestroy {
           name: 'Šta je uključeno u cenu maske za radijator?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'U cenu je uključena izrada od plastificiranog lima, CNC rezanje, prašno lakiranje u odabranoj boji i dostava kurirskom službom na adresu u Srbiji.'
+            text: 'U cenu je uključena izrada od plastificiranog lima debljine 1,5mm, CNC rezanje, prašno lakiranje u odabranoj boji i dostava kurirskom službom na adresu u Srbiji.'
           }
         },
         {
@@ -65,7 +65,15 @@ export class CenaComponent implements OnDestroy {
           name: 'Da li postoji dodatna naknada za nestandardne dimenzije?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Svaka maska se izrađuje po meri – nema dodatnih troškova za nestandardne dimenzije. Cena zavisi samo od veličine (površine) i odabranog uzorka, ne od toga da li su dimenzije standardne.'
+            text: 'Ne. Cena je ista za sve dimenzije i modele – 13.480 RSD. Svaka maska se izrađuje po meri, bez dodatnih troškova ili skrivenih naknada.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Da li je JYSK jeftiniji od izrade po meri?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Gotovi modeli iz prodavnica mogu izgledati jeftinije, ali dolaze u fiksnim dimenzijama koje retko odgovaraju tačno vašem radijatoru. Naša fiksna cena od 13.480 RSD uključuje izradu po meri, tako da nema neuklapanja ni naknadnih troškova.'
           }
         }
       ]
@@ -78,9 +86,9 @@ export class CenaComponent implements OnDestroy {
   }
 
   stavke = [
-    { naziv: 'Standardna maska (do 60cm širine)', cenaOd: 10980, cenaDo: 11980 },
-    { naziv: 'Maska srednje veličine (60–90cm)', cenaOd: 11980, cenaDo: 12980 },
-    { naziv: 'Velika maska (90–120cm)', cenaOd: 12480, cenaDo: 14480 },
-    { naziv: 'Maska jumbo format (120cm+)', cenaOd: 14480, cenaDo: null },
+    { naziv: 'Klasična maska – sve dimenzije', cena: 13480 },
+    { naziv: 'Maska sa linijama – sve dimenzije', cena: 13480 },
+    { naziv: 'Glatka maska – sve dimenzije', cena: 13480 },
+    { naziv: 'Izrada po meri (nestandardne dimenzije)', cena: 13480 },
   ];
 }

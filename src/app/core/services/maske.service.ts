@@ -13,7 +13,7 @@ const MASKE: Maska[] = [
       'Laserski isečeni uzorak obezbeđuje estetiku uz nesmetan protok toplog vazduha.',
     slike: ['assets/maska-za-radijator.png'],
     materijal: 'Plastificirani lim',
-    cena: 12480,
+    cena: 13480,
     novo: false,
     dostupno: true,
     karakteristike: [
@@ -36,7 +36,7 @@ const MASKE: Maska[] = [
       'Horizontalne lamele obezbeđuju optimalan protok toplog vazduha bez gubitka efikasnosti grejanja.',
     slike: ['assets/maska-za-radijator-linije.png'],
     materijal: 'Plastificirani lim',
-    cena: 12480,
+    cena: 13480,
     novo: true,
     dostupno: true,
     karakteristike: [
@@ -59,7 +59,7 @@ const MASKE: Maska[] = [
       'Perforacije odozdo i odozgo obezbeđuju cirkulaciju toplog vazduha.',
     slike: ['assets/maska-za-radijator-bez-sare.png'],
     materijal: 'Plastificirani lim',
-    cena: 12480,
+    cena: 13480,
     novo: false,
     dostupno: true,
     karakteristike: [

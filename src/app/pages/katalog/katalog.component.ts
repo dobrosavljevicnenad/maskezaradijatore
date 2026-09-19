@@ -30,8 +30,8 @@ export class KatalogComponent implements OnDestroy {
   }
 
   constructor(private meta: Meta, private title: Title) {
-    const seoTitle = 'Maske za radijatore – gotove i po meri, cene od 10.980 RSD | maskezaradijatore.rs';
-    const description = 'Svi modeli maski za radijatore – standardne (gotove) i po meri, bela i antracit boja, CNC izrada od plastificiranog lima. Dostava širom Srbije.';
+    const seoTitle = 'Maske za radijatore – gotove i po meri, cena 13.480 RSD | maskezaradijatore.rs';
+    const description = 'Svi modeli maski za radijatore po fiksnoj ceni od 13.480 RSD – standardne (gotove) i po meri, bela i antracit boja, CNC izrada od plastificiranog lima 1,5mm. Dostava širom Srbije.';
     const url = 'https://maskezaradijatore.rs/maske-za-radijatore';
 
     this.title.setTitle(seoTitle);
@@ -75,6 +75,22 @@ export class KatalogComponent implements OnDestroy {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Ne. Perforisani i lamelni modeli omogućavaju nesmetano strujanje toplog vazduha, bez gubitka efikasnosti grejanja.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Da li su ovo iste maske za radijatore kao u JYSK-u?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ne. U JYSK-u i sličnim prodavnicama nalazite gotove modele u fiksnim dimenzijama koje često ne odgovaraju vašem radijatoru. Mi izrađujemo maske od plastificiranog lima 1,5mm po tačnim merama vašeg radijatora, po fiksnoj ceni od 13.480 RSD.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Da li pravite i kutije za cevi od grejanja?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Specijalizovani smo za maske (kutije) za radijatore. Ako imate i vidljive cevi od grejanja koje želite da uklopite u isti dizajn, pozovite nas i dogovaramo izradu po vašim merama.'
           }
         }
       ]

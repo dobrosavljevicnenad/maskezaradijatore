@@ -3,7 +3,7 @@
   <section class="page-hero">
     <p class="eyebrow">Transparentnost</p>
     <h1>Maska za radijator – cena i cenovnik 2026</h1>
-    <p class="lead">Koliko košta maska za radijator? Cene zavise od dimenzija, uzorka i boje. Prikazujemo okvirne cene – konačna ponuda se dobija nakon slanja dimenzija.</p>
+    <p class="lead">Koliko košta maska za radijator? Cena je fiksna – <strong>13.480 RSD</strong> za sve modele i dimenzije, bez skrivenih troškova.</p>
   </section>
 
   <section class="section-wrap">
@@ -11,34 +11,29 @@
       @for (s of stavke; track s.naziv) {
         <div class="price-row">
           <span class="price-naziv">{{ s.naziv }}</span>
-          <span class="price-val">
-            @if (s.cenaDo) {
-              {{ s.cenaOd | number:'1.0-0' }} – {{ s.cenaDo | number:'1.0-0' }} RSD
-            } @else {
-              od {{ s.cenaOd | number:'1.0-0' }} RSD
-            }
-          </span>
+          <span class="price-val">{{ s.cena | number:'1.0-0' }} RSD</span>
         </div>
       }
     </div>
 
     <div class="cena-note">
-      <p>Konačna cena se utvrđuje nakon dostavljanja tačnih dimenzija. Pozovite nas za besplatnu procenu.</p>
+      <p>Fiksna cena važi za sve dimenzije radijatora. Pozovite nas za besplatnu procenu i tačnu ponudu.</p>
       <a [href]="phoneHref" class="btn-primary">Pozovi za ponudu – {{ phoneDisplay }}</a>
     </div>
   </section>
 
   <section class="seo-section">
-    <h2>Šta utiče na cenu maske za radijator?</h2>
+    <h2>Zašto je cena fiksna?</h2>
     <p>
-      <strong>Cena maske za radijator</strong> zavisi od nekoliko faktora: dimenzija radijatora, odabranog uzorka perforiranog
-      lima, boje praškom bojene površine i složenosti izrade. Standardni modeli za radijatore do 60 cm širine
-      dostupni su već od <strong>10.980 RSD</strong>, dok su veći formati i po meri izrađeni modeli nešto skuplje.
+      <strong>Cena maske za radijator</strong> (u narodu i <strong>kutije za radijator</strong>) kod nas je
+      jedinstvena – <strong>13.480 RSD</strong>, bez obzira na dimenzije radijatora, odabrani uzorak perforiranog
+      lima ili boju. Nema računanja po kvadraturi, nema "od" cene koja na kraju bude veća – tačno znate koliko
+      plaćate pre nego što naručite.
     </p>
     <p>
       Za razliku od gotovih maski sa police, naše <strong>maske za radijatore po meri</strong> se prilagođavaju
-      tačnim merama, bez kompromisa u izgledu ili funkcionalnosti. Svaki radijator je drugačiji, i svaka maska
-      treba da bude savršeno skrojena.
+      tačnim merama, bez kompromisa u izgledu ili funkcionalnosti, po istoj fiksnoj ceni. Svaki radijator je
+      drugačiji, i svaka maska treba da bude savršeno skrojena.
     </p>
 
     <h2>Šta je uključeno u cenu?</h2>
@@ -46,14 +41,14 @@
       Cena <strong>maske za radijator</strong> uključuje sve – nema skrivenih troškova. U ceni je:
     </p>
     <ul>
-      <li><strong>Izrada od plastificiranog lima</strong> – otporan na temperaturu i vlagu, ne hrđa</li>
+      <li><strong>Izrada od plastificiranog lima debljine 1,5mm</strong> – otporan na temperaturu i vlagu, ne hrđa</li>
       <li><strong>CNC rezanje</strong> – precizno sečenje prema vašim merama, tolerancija ±1 mm</li>
       <li><strong>Prašno lakiranje</strong> – bela, antracit ili RAL boja po izboru, otporna na ogrebotine</li>
       <li><strong>Dostava kurirskom službom</strong> – na adresu u Srbiji, rok 2–4 radna dana</li>
     </ul>
     <p>
-      Nema dodatnih troškova za nestandardne dimenzije – <strong>maska za radijator cena</strong> zavisi isključivo
-      od dimenzija (površine) i odabranog uzorka perforacije.
+      Nema dodatnih troškova za nestandardne dimenzije – <strong>maska za radijator cena</strong> je 13.480 RSD
+      bez obzira na veličinu radijatora ili odabrani uzorak perforacije.
     </p>
 
     <h2>Česta pitanja o ceni</h2>
@@ -62,8 +57,10 @@
       <dd>Da. Dostava je uračunata u cenu za sve narudžbine širom Srbije. Nema doplata za Beograd, Novi Sad, Niš ili druge gradove.</dd>
       <dt><strong>Mogu li da dobijem popust za više maski?</strong></dt>
       <dd>Da. Za narudžbine od 3 ili više maski kontaktirajte nas direktno za individualnu ponudu na broj {{ phoneDisplay }}.</dd>
-      <dt><strong>Da li je cena ista za sve uzorke perforacije?</strong></dt>
-      <dd>Cena je ista za sve standardne uzorke (perforacija, lamelni). Složeniji custom uzorci mogu biti malo skuplje – pitajte nas za detalje.</dd>
+      <dt><strong>Da li je cena ista za sve uzorke i dimenzije?</strong></dt>
+      <dd>Da. 13.480 RSD je fiksna cena za sve standardne uzorke (perforacija, lamelni) i sve dimenzije radijatora.</dd>
+      <dt><strong>Da li je JYSK jeftiniji od izrade po meri?</strong></dt>
+      <dd>Gotovi modeli iz prodavnica mogu izgledati jeftinije, ali dolaze u fiksnim dimenzijama koje retko odgovaraju tačno vašem radijatoru. Naša fiksna cena od 13.480 RSD uključuje izradu po meri, tako da nema neuklapanja ni naknadnih troškova.</dd>
     </dl>
 
     <div class="seo-links">

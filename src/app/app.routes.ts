@@ -5,17 +5,17 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Maska za radijator – maske za radijatore od 10.980 RSD | maskezaradijatore.rs'
+    title: 'MASKE ZA RADIJATORE - Najpovoljnije cene | Izrada po meri'
   },
   {
     path: 'maske-za-radijatore',
     loadComponent: () => import('./pages/katalog/katalog.component').then(m => m.KatalogComponent),
-    title: 'Maske za radijatore – gotove i po meri, cene od 10.980 RSD | maskezaradijatore.rs'
+    title: 'Maske za radijatore – gotove i po meri, cena 13.480 RSD | maskezaradijatore.rs'
   },
   {
     path: 'maske-za-radijatore-cena',
     loadComponent: () => import('./pages/cena/cena.component').then(m => m.CenaComponent),
-    title: 'Maska za radijator cena 2026 – od 10.980 do 14.480 RSD | maskezaradijatore.rs'
+    title: 'Maska za radijator cena 2026 – fiksno 13.480 RSD za sve modele | maskezaradijatore.rs'
   },
   {
     path: 'maska-za-radijator-po-meri',

@@ -43,7 +43,7 @@ export class AppComponent {
           closes: '17:00'
         }
       ],
-      priceRange: '10.980 – 14.480+ RSD',
+      priceRange: '13.480 RSD',
       description: 'Dekorativne maske za radijatore od plastificiranog lima. Izrada po meri, dostava širom Srbije.',
       areaServed: {
         '@type': 'Country',

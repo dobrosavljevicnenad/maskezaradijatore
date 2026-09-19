@@ -51,7 +51,7 @@ export class HomeComponent implements OnDestroy {
   ];
 
   constructor() {
-    const title = 'Maska za radijator – maske za radijatore od 10.980 RSD | maskezaradijatore.rs';
+    const title = 'MASKE ZA RADIJATORE - Najpovoljnije cene | Izrada po meri';
     const description = 'Dekorativna maska za radijator od plastificiranog lima – izrada po vašim merama, dostava 2–4 dana po Srbiji. Pozovite 065 977 5995.';
     const url = 'https://maskezaradijatore.rs/';
 
@@ -86,7 +86,15 @@ export class HomeComponent implements OnDestroy {
           name: 'Od kog materijala su izrađene maske za radijatore?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Plastificirani lim, CNC rezanje. Otporan na temperaturu, vlagu i ogrebotine. Lako se čisti vlažnom krpom.'
+            text: 'Plastificirani lim debljine 1,5mm, CNC rezanje. Otporan na temperaturu, vlagu i ogrebotine. Lako se čisti vlažnom krpom.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Da li su ovo iste maske za radijatore kao u JYSK-u?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ne. Gotovi modeli iz prodavnica dolaze u fiksnim dimenzijama koje često ne odgovaraju vašem radijatoru. Mi izrađujemo maske od plastificiranog lima 1,5mm po tačnim merama, po fiksnoj ceni od 13.480 RSD.'
           }
         },
         {
