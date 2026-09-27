@@ -20,7 +20,7 @@
       Maska za radijator
     </h1>
     <p class="!mt-4 !text-lg !text-gray-600 !max-w-2xl !mx-auto !leading-relaxed">
-      Dekorativne maske za radijatore od plastificiranog lima – izrađene po meri, dostava širom Srbije.
+      Dekorativne maske za radijatore od plastificiranog lima debljine 1,5 mm – izrađene po meri, dostava širom Srbije.
     </p>
   </section>
 
@@ -33,7 +33,7 @@
       </div>
       <div class="!rounded-[1.75rem] !bg-white !border !border-gray-200 !shadow-sm !p-6 !text-center">
         <p class="!text-xs !uppercase !tracking-[0.18em] !text-gray-500 !mb-2">Materijal</p>
-        <p class="!text-lg !font-bold !text-gray-950">Plastificirani lim</p>
+        <p class="!text-lg !font-bold !text-gray-950">Lim 1,5 mm</p>
       </div>
       <div class="!rounded-[1.75rem] !bg-white !border !border-gray-200 !shadow-sm !p-6 !text-center">
         <p class="!text-xs !uppercase !tracking-[0.18em] !text-gray-500 !mb-2">Kontakt</p>
@@ -212,6 +212,74 @@
     </div>
   </section>
 
+  <!-- LIM 1,5 MM – materijal i poređenje -->
+  <section class="!max-w-6xl !mx-auto !px-6 sm:!px-10 !py-14" aria-labelledby="lim-title">
+    <div class="!text-center !max-w-3xl !mx-auto !mb-10">
+      <p class="!text-sm !uppercase !tracking-[0.20em] !text-gray-500 !mb-3">Materijal</p>
+      <h2 id="lim-title" class="!text-3xl sm:!text-4xl lg:!text-5xl !font-black !tracking-[-0.03em] !text-gray-950">
+        Maske za radijatore od lima 1,5 mm
+      </h2>
+    </div>
+
+    <div class="!grid lg:!grid-cols-2 !gap-8">
+      <div class="!rounded-[2rem] !bg-white !border !border-gray-200 !shadow-sm !p-8 sm:!p-10 !space-y-4 !text-gray-700 !leading-relaxed">
+        <p>
+          Svaka <strong>maska za radijator</strong> koju pravimo izrađena je od čeličnog lima debljine
+          <strong>1,5 mm</strong>, isečena na CNC mašini i plastificirana (praškasto lakirana).
+          Takva maska je čvrsta, ne krivi se, ne upija vlagu i ne menja boju od toplote – za razliku od
+          maski od iverice ili medijapana koje se vremenom nadimaju i pucaju pored toplog radijatora.
+        </p>
+        <p>
+          Metal dobro provodi toplotu, pa <strong>maske za radijator</strong> od lima greju i same –
+          prostorija se zagreva gotovo jednako brzo kao sa otvorenim radijatorom. Perforacije i lamele
+          propuštaju topao vazduh, a plastificirana površina se čisti vlažnom krpom.
+        </p>
+        <p>
+          Mnogi kupci ih zovu i <strong>kutija za radijator</strong> ili zaštita za radijator – u pitanju je isti
+          proizvod: maska koja prekriva radijator sa prednje strane i odozgo, izrađena tačno po vašim merama.
+        </p>
+      </div>
+
+      <div class="!rounded-[2rem] !bg-white !border !border-gray-200 !shadow-sm !p-8 sm:!p-10 !overflow-x-auto">
+        <h3 class="!text-xl !font-semibold !text-gray-950 !mb-5">Metalna ili drvena maska za radijator?</h3>
+        <table class="!w-full !text-sm !text-left">
+          <thead>
+            <tr class="!border-b !border-gray-200 !text-gray-500">
+              <th class="!py-2 !pr-3 !font-medium"></th>
+              <th class="!py-2 !pr-3 !font-semibold !text-gray-950">Lim 1,5 mm</th>
+              <th class="!py-2 !font-medium">Iverica / MDF</th>
+            </tr>
+          </thead>
+          <tbody class="!text-gray-700">
+            <tr class="!border-b !border-gray-100">
+              <td class="!py-3 !pr-3 !text-gray-500">Toplota</td>
+              <td class="!py-3 !pr-3">Provodi toplotu</td>
+              <td class="!py-3">Izoluje, zadržava toplotu</td>
+            </tr>
+            <tr class="!border-b !border-gray-100">
+              <td class="!py-3 !pr-3 !text-gray-500">Vlaga</td>
+              <td class="!py-3 !pr-3">Otporan</td>
+              <td class="!py-3">Nadima se</td>
+            </tr>
+            <tr class="!border-b !border-gray-100">
+              <td class="!py-3 !pr-3 !text-gray-500">Trajnost</td>
+              <td class="!py-3 !pr-3">Ne krivi se, boja ne žuti</td>
+              <td class="!py-3">Ivice se oštećuju</td>
+            </tr>
+            <tr>
+              <td class="!py-3 !pr-3 !text-gray-500">Cena</td>
+              <td class="!py-3 !pr-3 !font-semibold !text-gray-950">{{ formatCena(maske[0].cena) }} RSD, bilo koja dimenzija</td>
+              <td class="!py-3">Obračun po dužnom metru</td>
+            </tr>
+          </tbody>
+        </table>
+        <a routerLink="/metalne-maske-za-radijatore" class="!inline-flex !mt-6 !font-semibold !text-gray-950 !underline !underline-offset-4">
+          Više o metalnim maskama za radijatore
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURE – 3 slike u horizontalnom scroll -->
   <section class="!max-w-7xl !mx-auto !px-6 sm:!px-10 !py-14">
     <div class="!text-center !mb-10">
@@ -279,11 +347,15 @@
       </div>
       <div class="!bg-white !border !border-gray-200 !rounded-[1.75rem] !p-6 sm:!p-7 !shadow-sm">
         <h3 class="!text-xl !font-semibold !text-gray-950 !mb-2">Da li imate gotove maske za radijatore?</h3>
-        <p class="!text-gray-700 !leading-relaxed">Imamo standardne dimenzije, ali svaku masku izrađujemo tek po primanju vaših mera. Maska po meri garantuje savršeno prileganje – preporučujemo je jer svaki radijator ima različite dimenzije.</p>
+        <p class="!text-gray-700 !leading-relaxed">Imamo standardne dimenzije, ali svaku masku izrađujemo tek po primanju vaših mera. Cena je ista kao za gotove maske – {{ formatCena(maske[0].cena) }} RSD – a maska po meri garantuje savršeno prileganje jer svaki radijator ima različite dimenzije.</p>
       </div>
       <div class="!bg-white !border !border-gray-200 !rounded-[1.75rem] !p-6 sm:!p-7 !shadow-sm">
         <h3 class="!text-xl !font-semibold !text-gray-950 !mb-2">Koliko traje isporuka?</h3>
-        <p class="!text-gray-700 !leading-relaxed">Rok isporuke je 5–10 radnih dana od potvrde narudžbine. Dostavljamo kurirskom službom – Beograd, Novi Sad, Niš, Kragujevac i svi drugi gradovi Srbije.</p>
+        <p class="!text-gray-700 !leading-relaxed">Ukupan rok (izrada + dostava) je 5–10 radnih dana od potvrde narudžbine. Dostavljamo kurirskom službom – Beograd, Novi Sad, Niš, Kragujevac i svi drugi gradovi Srbije.</p>
+      </div>
+      <div class="!bg-white !border !border-gray-200 !rounded-[1.75rem] !p-6 sm:!p-7 !shadow-sm">
+        <h3 class="!text-xl !font-semibold !text-gray-950 !mb-2">Gde kupiti masku za radijator?</h3>
+        <p class="!text-gray-700 !leading-relaxed">Direktno od nas kao proizvođača – pozovite {{ phoneDisplay }} ili pošaljite mere. Radionica je u Smederevu, a maske šaljemo na adresu u celoj Srbiji. Više na stranici <a routerLink="/gde-kupiti-masku-za-radijator" class="!underline !underline-offset-4">gde kupiti masku za radijator</a>.</p>
       </div>
     </div>
   </section>
@@ -293,7 +365,7 @@
     <div class="!text-center !mb-10">
       <p class="!text-sm !font-semibold !uppercase !tracking-[0.22em] !text-gray-500 !mb-3">Utisci kupaca</p>
       <h2 id="recenzije-title" class="!text-3xl sm:!text-4xl lg:!text-5xl !font-black !tracking-[-0.03em] !text-gray-950">
-        Šta kažu naši klijenti
+        Maske za radijatore – iskustva kupaca
       </h2>
       <p class="!mt-3 !text-gray-500 !text-base">
         <span class="!text-amber-400 !text-lg">★★★★★</span>

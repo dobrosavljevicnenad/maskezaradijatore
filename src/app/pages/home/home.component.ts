@@ -52,7 +52,7 @@ export class HomeComponent implements OnDestroy {
 
   constructor() {
     const title = 'MASKE ZA RADIJATORE - Najpovoljnije cene | Izrada po meri';
-    const description = 'Dekorativna maska za radijator od plastificiranog lima – izrada po vašim merama, dostava 2–4 dana po Srbiji. Pozovite 065 977 5995.';
+    const description = 'Dekorativna maska za radijator od plastificiranog lima 1,5 mm – izrada po vašim merama, dostava 2–4 dana po Srbiji. Pozovite 065 977 5995.';
     const url = 'https://maskezaradijatore.rs/';
 
     this.titleService.setTitle(title);
@@ -126,7 +126,7 @@ export class HomeComponent implements OnDestroy {
           name: 'Da li imate gotove maske za radijatore koje ne zahtevaju merenje?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Imamo standardne dimenzije koje odgovaraju većini radijatora, ali svaku masku izrađujemo tek nakon primanja vaših mera. Izradu po meri preporučujemo jer svaki radijator ima različite dimenzije, a maska po meri garantuje savršeno prileganje bez zazora.'
+            text: 'Imamo standardne dimenzije koje odgovaraju većini radijatora, ali svaku masku izrađujemo tek nakon primanja vaših mera. Cena je ista kao za gotove maske – 13.480 RSD. Izradu po meri preporučujemo jer svaki radijator ima različite dimenzije, a maska po meri garantuje savršeno prileganje bez zazora.'
           }
         },
         {
@@ -134,7 +134,15 @@ export class HomeComponent implements OnDestroy {
           name: 'Koliko traje isporuka maske za radijator?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Rok isporuke je 5–10 radnih dana od potvrde narudžbine. Dostavljamo kurirskom službom na adresu u Srbiji – Beograd, Novi Sad, Niš, Kragujevac i svi drugi gradovi.'
+            text: 'Ukupan rok (izrada + dostava) je 5–10 radnih dana od potvrde narudžbine. Dostavljamo kurirskom službom na adresu u Srbiji – Beograd, Novi Sad, Niš, Kragujevac i svi drugi gradovi.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Gde kupiti masku za radijator?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Direktno od nas kao proizvođača – pozovite 065 977 5995 ili pošaljite mere. Radionica je u Smederevu, a maske šaljemo na adresu u celoj Srbiji.'
           }
         }
       ]
@@ -144,6 +152,21 @@ export class HomeComponent implements OnDestroy {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: 'Maska za radijator',
+      description: 'Dekorativna maska za radijator od plastificiranog lima debljine 1,5 mm, CNC izrada po meri. Fiksna cena za sve dimenzije.',
+      image: ['https://maskezaradijatore.rs/assets/maska-za-radijator.png'],
+      brand: { '@type': 'Brand', name: 'Maske za radijatore' },
+      material: 'Plastificirani čelični lim 1,5 mm',
+      sku: 'MASKA-RADIJATOR-001',
+      offers: {
+        '@type': 'Offer',
+        url,
+        priceCurrency: 'RSD',
+        price: '13480',
+        priceValidUntil: '2026-12-31',
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+        seller: { '@id': 'https://maskezaradijatore.rs/#organization' }
+      },
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: '4.9',
