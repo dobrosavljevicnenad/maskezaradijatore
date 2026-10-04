@@ -27,6 +27,10 @@ export class FooterComponent {
     { label: 'Kako izabrati masku', path: '/kako-izabrati-masku-za-radijator' },
     { label: 'Da li maska smanjuje grejanje?', path: '/da-li-maska-smanjuje-grejanje' },
     { label: 'Gde kupiti masku', path: '/gde-kupiti-masku-za-radijator' },
+    { label: 'Kako izmeriti radijator', path: '/kako-izmeriti-radijator-za-masku' },
+    { label: 'Montaža maske', path: '/montaza-maske-za-radijator' },
+    { label: 'Maska za panel radijator', path: '/maska-za-panel-radijator' },
+    { label: 'Zaštita za decu', path: '/maska-za-radijator-zastita-za-decu' },
     { label: 'Blog', path: '/blog' },
     { label: 'Kontakt', path: '/kontakt' },
   ];
