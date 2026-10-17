@@ -67,6 +67,7 @@ export class BlogComponent implements OnDestroy {
   }
 
   clanci = [
+    { slug: 'maska-za-liveni-radijator', naslov: 'Maska za liveni i člankasti radijator', opis: 'Kako se pravi i postavlja maska za stari liveni (rebrasti) radijator, kako ga izmeriti i da li maska smanjuje grejanje.', datum: '2026-10-17' },
     { slug: 'maska-za-radijator-zastita-za-decu', naslov: 'Maska za radijator kao zaštita za decu', opis: 'Kako maska štiti decu od vrelih rebara, cevi i ventila, i na šta da obratite pažnju kada birate masku za dečiju sobu.', datum: '2026-10-04' },
     { slug: 'maska-za-panel-radijator', naslov: 'Maska za panel radijator – šta treba da znate', opis: 'Panel radijatori su najrasprostranjeniji tip u Srbiji. Saznajte kako se naručuje maska, gde idu ventili i koliko košta.', datum: '2026-04-28' },
     { slug: 'montaza-maske-za-radijator', naslov: 'Montaža maske za radijator – korak po korak', opis: 'Postavljanje maske za radijator traje 15–30 minuta i ne zahteva majstora ni bušenje zida. Detaljan vodič.', datum: '2026-04-15' },

@@ -83,7 +83,7 @@
 
   <url>
     <loc>https://maskezaradijatore.rs/maska-za-panel-radijator</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -91,9 +91,15 @@
   <!-- Blog -->
   <url>
     <loc>https://maskezaradijatore.rs/blog</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maskezaradijatore.rs/maska-za-liveni-radijator</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://maskezaradijatore.rs/maska-za-radijator-zastita-za-decu</loc>

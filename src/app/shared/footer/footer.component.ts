@@ -30,6 +30,7 @@ export class FooterComponent {
     { label: 'Kako izmeriti radijator', path: '/kako-izmeriti-radijator-za-masku' },
     { label: 'Montaža maske', path: '/montaza-maske-za-radijator' },
     { label: 'Maska za panel radijator', path: '/maska-za-panel-radijator' },
+    { label: 'Maska za liveni radijator', path: '/maska-za-liveni-radijator' },
     { label: 'Zaštita za decu', path: '/maska-za-radijator-zastita-za-decu' },
     { label: 'Blog', path: '/blog' },
     { label: 'Kontakt', path: '/kontakt' },

@@ -73,6 +73,11 @@ export const routes: Routes = [
     title: 'Maska za radijator – zaštita za decu od vrelog radijatora'
   },
   {
+    path: 'maska-za-liveni-radijator',
+    loadComponent: () => import('./pages/liveni-radijator/liveni-radijator.component').then(m => m.LiveniRadijatorComponent),
+    title: 'Maska za liveni i člankasti radijator – izrada po meri'
+  },
+  {
     path: 'blog',
     loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent),
     title: 'Blog – saveti i informacije o maskama za radijatore'
