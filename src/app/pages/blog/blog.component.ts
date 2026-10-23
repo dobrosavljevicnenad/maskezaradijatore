@@ -59,11 +59,27 @@ export class BlogComponent implements OnDestroy {
         }
       ]
     });
+
+    // This mirrors the visible article cards, so crawlers can identify the blog
+    // as a curated list of guides and discover each article URL more clearly.
+    this.schema.inject('blog-article-list', {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Vodiči o maskama za radijatore',
+      numberOfItems: this.clanci.length,
+      itemListElement: this.clanci.map((clanak, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://maskezaradijatore.rs/${clanak.slug}`,
+        name: clanak.naslov
+      }))
+    });
   }
 
   ngOnDestroy(): void {
     this.schema.remove('blog-breadcrumb');
     this.schema.remove('blog-faq');
+    this.schema.remove('blog-article-list');
   }
 
   clanci = [
