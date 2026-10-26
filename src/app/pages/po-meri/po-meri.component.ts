@@ -47,7 +47,7 @@ export class PoMeriComponent implements OnDestroy {
           name: 'Kako se naručuje maska za radijator po meri?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Izmerite radijator (širinu, visinu i dubinu), pošaljite nam dimenzije i željenu boju ili uzorak, a mi izrađujemo CNC tehnologijom i dostavljamo u roku od 5 do 10 radnih dana.'
+            text: 'Izmerite radijator (širinu, visinu i dubinu), pošaljite nam dimenzije i željenu boju ili uzorak, a mi izrađujemo CNC tehnologijom u roku od 5 do 7 radnih dana i šaljemo na vašu adresu.'
           }
         },
         {
@@ -78,6 +78,6 @@ export class PoMeriComponent implements OnDestroy {
   koraci = [
     { broj: '01', naziv: 'Izmerite radijator', opis: 'Izmervite širinu, visinu i dubinu radijatora. Zabeležite i razmak do zida.' },
     { broj: '02', naziv: 'Pošaljite dimenzije', opis: 'Pozovite nas ili pošaljite poruku sa dimenzijama i željenom bojom/uzorkom.' },
-    { broj: '03', naziv: 'Izrada i dostava', opis: 'Maska se izrađuje CNC tehnologijom i šalje na vašu adresu u roku 5–10 dana.' },
+    { broj: '03', naziv: 'Izrada i dostava', opis: 'Maska se izrađuje CNC tehnologijom u roku od 5–7 radnih dana i šalje na vašu adresu.' },
   ];
 }

@@ -21,7 +21,7 @@ export class GdeKupitiComponent implements OnDestroy {
 
   constructor(private meta: Meta, private title: Title) {
     const seoTitle = 'Maska za radijator Beograd, Novi Sad, Niš – dostava po Srbiji';
-    const description = 'Kupite masku za radijator direktno od proizvođača. Dostavljamo u Beograd, Novi Sad, Niš, Kragujevac i celu Srbiju. Izrada po meri, rok 5–10 radnih dana.';
+    const description = 'Kupite masku za radijator direktno od proizvođača. Dostavljamo u Beograd, Novi Sad, Niš, Kragujevac i celu Srbiju. Izrada po meri, rok 5–7 radnih dana.';
     const url = 'https://maskezaradijatore.rs/gde-kupiti-masku-za-radijator';
 
     this.title.setTitle(seoTitle);
@@ -55,7 +55,7 @@ export class GdeKupitiComponent implements OnDestroy {
           name: 'Koliko traje dostava maske za radijator u Beograd?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Dostava u Beograd traje 2–4 radna dana kurirskom službom, direktno na kućnu adresu.'
+            text: 'Masku izrađujemo u roku od 5–7 radnih dana, a zatim je šaljemo kurirskom službom direktno na kućnu adresu u Beogradu.'
           }
         },
         {
@@ -63,7 +63,7 @@ export class GdeKupitiComponent implements OnDestroy {
           name: 'Da li dostavljate maske za radijatore u Novi Sad i Niš?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Da. Dostava u Novi Sad traje 2–3 radna dana, a u Niš i okolinu takođe redovno dostavljamo, bez obzira na tip radijatora.'
+            text: 'Da. Maske izrađujemo u roku od 5–7 radnih dana, a zatim ih kurirskom službom šaljemo u Novi Sad, Niš i ostale gradove Srbije, bez obzira na tip radijatora.'
           }
         },
         {

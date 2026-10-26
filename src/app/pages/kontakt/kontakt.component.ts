@@ -62,7 +62,7 @@ export class KontaktComponent implements OnDestroy {
           name: 'Da li dostavljate maske za radijatore van Smedereva?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Da, dostavljamo maske za radijatore na adrese u celoj Srbiji. Rok isporuke je obično 5–10 radnih dana od potvrde porudžbine.'
+            text: 'Da, dostavljamo maske za radijatore na adrese u celoj Srbiji. Rok izrade je 5–7 radnih dana od potvrde porudžbine, a masku šaljemo kurirskom službom.'
           }
         }
       ]

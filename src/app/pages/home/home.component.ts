@@ -52,7 +52,7 @@ export class HomeComponent implements OnDestroy {
 
   constructor() {
     const title = 'MASKE ZA RADIJATORE - Najpovoljnije cene | Izrada po meri';
-    const description = 'Dekorativna maska za radijator od plastificiranog lima 1,5 mm – izrada po vašim merama, dostava 2–4 dana po Srbiji. Pozovite 065 977 5995.';
+    const description = 'Dekorativna maska za radijator od plastificiranog lima 1,5 mm – izrada po vašim merama, rok izrade 5–7 radnih dana, dostava širom Srbije. Pozovite 065 977 5995.';
     const url = 'https://maskezaradijatore.rs/';
 
     this.titleService.setTitle(title);
@@ -110,7 +110,7 @@ export class HomeComponent implements OnDestroy {
           name: 'Da li dostavljate maske za radijatore u Beograd i druge gradove Srbije?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Da, dostavljamo na adresu širom Srbije – Beograd, Novi Sad, Niš, Kragujevac, Subotica i ostale gradove. Dostava kurirskom službom, rok 2–4 radna dana.'
+            text: 'Da, dostavljamo na adresu širom Srbije – Beograd, Novi Sad, Niš, Kragujevac, Subotica i ostale gradove. Rok izrade je 5–7 radnih dana, a masku šaljemo kurirskom službom na vašu adresu.'
           }
         },
         {
@@ -134,7 +134,7 @@ export class HomeComponent implements OnDestroy {
           name: 'Koliko traje isporuka maske za radijator?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ukupan rok (izrada + dostava) je 5–10 radnih dana od potvrde narudžbine. Dostavljamo kurirskom službom na adresu u Srbiji – Beograd, Novi Sad, Niš, Kragujevac i svi drugi gradovi.'
+            text: 'Rok izrade je 5–7 radnih dana od potvrde narudžbine. Gotovu masku šaljemo kurirskom službom na adresu u Srbiji – Beograd, Novi Sad, Niš, Kragujevac i svi drugi gradovi.'
           }
         },
         {
