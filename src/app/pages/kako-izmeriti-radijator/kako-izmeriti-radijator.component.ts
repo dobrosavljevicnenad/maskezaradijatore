@@ -19,8 +19,8 @@ export class KakoIzmeritiRadijatorComponent implements OnDestroy {
   private social = inject(SocialMetaService);
 
   constructor(private meta: Meta, private title: Title) {
-    const seoTitle = 'Kako izmeriti radijator za masku – vodič korak po korak';
-    const description = 'Kako izmeriti radijator za masku za radijator? Potrebne su vam tri mere: širina, visina i dubina. Detaljan vodič sa primerima i savetima.';
+    const seoTitle = 'Kako izmeriti masku za radijator – uputstvo sa slikama';
+    const description = 'Pogledajte kako da izmerite radijator, pripremite skicu i zabeležite mere lajsni i cevi. Uputstvo sa slikama za izradu maske po meri.';
     const url = 'https://maskezaradijatore.rs/kako-izmeriti-radijator-za-masku';
 
     this.title.setTitle(seoTitle);
@@ -47,15 +47,15 @@ export class KakoIzmeritiRadijatorComponent implements OnDestroy {
           name: 'Koje mere su potrebne za masku za radijator?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Potrebne su tri mere: širina radijatora, visina radijatora i dubina (koliko strši od zida). Maska se pravi 2–3 cm šira i viša od radijatora.'
+            text: 'Izmerite širinu zajedno sa ventilom, visinu od poda do vrha radijatora i dubinu od zida do najudaljenije tačke. Pošaljite skicu sa merama, položajem i prečnikom cevi. Ako imate podne lajsne, obavezno navedite njihovu visinu i koliko izlaze od zida; ako ih nema, napišite to uz skicu.'
           }
         },
         {
           '@type': 'Question',
-          name: 'Da li postoje standardne dimenzije maski za radijatore?',
+          name: 'Šta treba izmeriti ako radijator ima dve cevi?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ne, maske za radijatore se rade isključivo po meri svakog radijatora. Svaki radijator ima specifičnu kombinaciju visine, širine i dubine.'
+            text: 'Za svaku cev posebno izmerite visinu od poda do donje ivice cevi i njen spoljašnji prečnik. Tačne visine i prečnici obe cevi potrebni su nam da napravimo odgovarajuće usečke.'
           }
         },
         {

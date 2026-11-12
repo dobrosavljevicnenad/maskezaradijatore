@@ -22,7 +22,7 @@ export class CenaComponent implements OnDestroy {
 
   constructor(private meta: Meta, private title: Title) {
     const seoTitle = 'Maska za radijator cena 2026 – fiksno 13.480 RSD za sve modele | maskezaradijatore.rs';
-    const description = 'Cena maske za radijator je fiksna – 13.480 RSD za sve dimenzije i modele, bez skrivenih troškova. Izrada po meri, dostava Srbija. ☎ 065 977 5995 za ponudu.';
+    const description = 'Cena maske za radijator je fiksna – 13.480 RSD za sve dimenzije i modele. Izrada po meri, dostava Srbija. ☎ 065 977 5995 za ponudu.';
     const url = 'https://maskezaradijatore.rs/maske-za-radijatore-cena';
 
     this.title.setTitle(seoTitle);
@@ -57,7 +57,7 @@ export class CenaComponent implements OnDestroy {
           name: 'Šta je uključeno u cenu maske za radijator?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'U cenu je uključena izrada od plastificiranog lima debljine 1,5mm, CNC rezanje, prašno lakiranje u odabranoj boji i dostava kurirskom službom na adresu u Srbiji.'
+            text: 'U cenu je uključena izrada od plastificiranog lima debljine 1,5mm, CNC rezanje i prašno lakiranje u odabranoj boji.'
           }
         },
         {
@@ -65,7 +65,7 @@ export class CenaComponent implements OnDestroy {
           name: 'Da li postoji dodatna naknada za nestandardne dimenzije?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ne. Cena je ista za sve dimenzije i modele – 13.480 RSD. Svaka maska se izrađuje po meri, bez dodatnih troškova ili skrivenih naknada.'
+            text: 'Ne. Cena je ista za sve dimenzije i modele – 13.480 RSD. Svaka maska se izrađuje po meri.'
           }
         },
         {
@@ -73,7 +73,7 @@ export class CenaComponent implements OnDestroy {
           name: 'Da li je JYSK jeftiniji od izrade po meri?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Gotovi modeli iz prodavnica mogu izgledati jeftinije, ali dolaze u fiksnim dimenzijama koje retko odgovaraju tačno vašem radijatoru. Naša fiksna cena od 13.480 RSD uključuje izradu po meri, tako da nema neuklapanja ni naknadnih troškova.'
+            text: 'Gotovi modeli iz prodavnica mogu izgledati jeftinije, ali dolaze u fiksnim dimenzijama koje retko odgovaraju tačno vašem radijatoru. Naša fiksna cena od 13.480 RSD uključuje izradu po meri.'
           }
         }
       ]

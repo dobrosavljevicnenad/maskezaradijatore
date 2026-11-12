@@ -55,7 +55,7 @@ export const routes: Routes = [
   {
     path: 'kako-izmeriti-radijator-za-masku',
     loadComponent: () => import('./pages/kako-izmeriti-radijator/kako-izmeriti-radijator.component').then(m => m.KakoIzmeritiRadijatorComponent),
-    title: 'Kako izmeriti radijator za masku – vodič korak po korak'
+    title: 'Kako izmeriti masku za radijator – uputstvo sa slikama'
   },
   {
     path: 'montaza-maske-za-radijator',
